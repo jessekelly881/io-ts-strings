@@ -10,12 +10,8 @@
     "is-valid-host": "^1.0.1",
     "validator": "^13.7.0"
   },
-  "dependencies": {
-    "@relmify/jest-fp-ts": "^2.0.0",
-    "@types/validator": "^13.7.1",
-    "validator": "^13.7.0"
-  },
   "devDependencies": {
+    "@relmify/jest-fp-ts": "^2.0.0",
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.25.0",
     "@typescript-eslint/parser": "^4.25.0",
@@ -28,7 +24,10 @@
     "prettier": "^2.2.1",
     "prettier-plugin-jsdoc": "^0.3.13",
     "ts-jest": "^26.5.3",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.3",
+    "@types/validator": "^13.7.1",
+    "is-valid-host": "^1.0.1",
+    "validator": "^13.7.0"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
