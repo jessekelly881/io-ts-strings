@@ -1,60 +1,63 @@
-Info 0    [15:19:06.795] Starting TS Server
-Info 1    [15:19:06.798] Version: 4.6.2
-Info 2    [15:19:06.799] Arguments: /Users/jessekelly/.nvm/versions/node/v14.17.0/bin/node /Users/jessekelly/projects/io-ts-string-types/node_modules/.bin/tsserver --logFile /Users/jessekelly/projects/io-ts-string-types/.log/tsserver.log --logVerbosity info --cancellationPipeName /private/var/folders/lc/y2dbm6r52hj5ljsq41phk2sm0000gn/T/a60b0ad35527a4c4c17ce7edb026a4f3/tscancellation*
-Info 3    [15:19:06.799] Platform: darwin NodeVersion: 14 CaseSensitive: false
-Info 4    [15:19:06.799] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
-Info 5    [15:19:07.416] Search path: /Users/jessekelly/projects/io-ts-string-types/tests
-Info 6    [15:19:07.416] For info: /Users/jessekelly/projects/io-ts-string-types/tests/Base.ts :: Config file name: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 7    [15:19:07.416] Creating configuration project /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 8    [15:19:07.427] Config: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json : {
+Info 0    [15:38:38.016] Starting TS Server
+Info 1    [15:38:38.017] Version: 4.6.2
+Info 2    [15:38:38.017] Arguments: /Users/jessekelly/.nvm/versions/node/v14.17.0/bin/node /Users/jessekelly/projects/io-ts-strings/node_modules/.bin/tsserver --logFile /Users/jessekelly/projects/io-ts-strings/.log/tsserver.log --logVerbosity info --cancellationPipeName /private/var/folders/lc/y2dbm6r52hj5ljsq41phk2sm0000gn/T/91062cd12ed85107d0d59e407b70b7b1/tscancellation*
+Info 3    [15:38:38.017] Platform: darwin NodeVersion: 14 CaseSensitive: false
+Info 4    [15:38:38.017] ServerMode: undefined syntaxOnly: false hasUnknownServerMode: undefined
+Info 5    [15:38:38.375] Search path: /Users/jessekelly/projects/io-ts-strings/src
+Info 6    [15:38:38.375] For info: /Users/jessekelly/projects/io-ts-strings/src/NonEmpty.ts :: Config file name: /Users/jessekelly/projects/io-ts-strings/tsconfig.json
+Info 7    [15:38:38.375] Creating configuration project /Users/jessekelly/projects/io-ts-strings/tsconfig.json
+Info 8    [15:38:38.386] Config: /Users/jessekelly/projects/io-ts-strings/tsconfig.json : {
  "rootNames": [
-  "/Users/jessekelly/projects/io-ts-string-types/src/Alpha.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/AlphaNumeric.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Ascii.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/BIC.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Base.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/BitcoinAddress.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Char.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/CountryCode.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/CreditCard.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/CurrencyCode.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/DataURI.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Email.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Empty.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/EthereumAddress.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/HSL.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Hash.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/HexColor.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Hexadecimal.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/IBAN.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/IP.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/IPRange.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/ISIN.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/ISRC.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/ISSN.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/JWT.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/LatLong.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Locale.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Lowercase.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/MACAddress.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/MagnetURI.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Numeric.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Octal.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/PassportNumber.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/PhoneNumber.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Port.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/PostalCode.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/SemVer.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/StrongPassword.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/URL.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/UUID.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/Uppercase.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/src/index.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/tests/Alpha.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/tests/AlphaNumeric.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/tests/Ascii.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/tests/Base.ts",
-  "/Users/jessekelly/projects/io-ts-string-types/tests/Char.ts"
+  "/Users/jessekelly/projects/io-ts-strings/src/Alpha.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/AlphaNumeric.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Ascii.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/BIC.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Base.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/BitcoinAddress.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Char.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/CountryCode.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/CreditCard.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/CurrencyCode.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/DataURI.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Email.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Empty.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/EthereumAddress.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/HSL.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Hash.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/HexColor.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Hexadecimal.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/IBAN.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/IP.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/IPRange.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/ISIN.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/ISRC.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/ISSN.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/JWT.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/LatLong.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Locale.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Lowercase.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/MACAddress.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/MagnetURI.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/NonEmpty.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Numeric.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Octal.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/PassportNumber.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/PhoneNumber.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Port.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/PostalCode.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/SemVer.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/StrongPassword.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/URL.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/UUID.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/Uppercase.ts",
+  "/Users/jessekelly/projects/io-ts-strings/src/index.ts",
+  "/Users/jessekelly/projects/io-ts-strings/tests/Alpha.ts",
+  "/Users/jessekelly/projects/io-ts-strings/tests/AlphaNumeric.ts",
+  "/Users/jessekelly/projects/io-ts-strings/tests/Ascii.ts",
+  "/Users/jessekelly/projects/io-ts-strings/tests/Base.ts",
+  "/Users/jessekelly/projects/io-ts-strings/tests/Char.ts",
+  "/Users/jessekelly/projects/io-ts-strings/tests/Email.ts",
+  "/Users/jessekelly/projects/io-ts-strings/tests/Empty.ts"
  ],
  "options": {
   "strict": true,
@@ -70,180 +73,34 @@ Info 8    [15:19:07.427] Config: /Users/jessekelly/projects/io-ts-string-types/t
   "target": 1,
   "module": 1,
   "noEmit": true,
-  "configFilePath": "/Users/jessekelly/projects/io-ts-string-types/tsconfig.json"
+  "configFilePath": "/Users/jessekelly/projects/io-ts-strings/tsconfig.json"
  }
 }
-Info 9    [15:19:07.449] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 10   [15:19:08.254] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 804.4899997711182ms
-Info 11   [15:19:08.254] Project '/Users/jessekelly/projects/io-ts-string-types/tsconfig.json' (Configured)
-Info 12   [15:19:08.254] 	Files (295)
+Info 9    [15:38:38.412] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-strings/tsconfig.json
+Info 10   [15:38:39.257] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-strings/tsconfig.json Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 844.4236669540405ms
+Info 11   [15:38:39.257] Project '/Users/jessekelly/projects/io-ts-strings/tsconfig.json' (Configured)
+Info 12   [15:38:39.257] 	Files (298)
 
-Info 13   [15:19:08.254] -----------------------------------------------
-Info 14   [15:19:08.266] AutoImportProviderProject: found 1 root files in 1 dependencies in 9.98449993133545 ms
-Info 15   [15:19:08.266] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
-Info 16   [15:19:08.415] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 148.28725004196167ms
-Info 17   [15:19:08.415] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
-Info 18   [15:19:08.415] 	Files (120)
+Info 13   [15:38:39.257] -----------------------------------------------
+Info 14   [15:38:39.264] AutoImportProviderProject: found 1 root files in 1 dependencies in 5.3015828132629395 ms
+Info 15   [15:38:39.264] Starting updateGraphWorker: Project: /dev/null/autoImportProviderProject1*
+Info 16   [15:38:39.485] Finishing updateGraphWorker: Project: /dev/null/autoImportProviderProject1* Version: 1 structureChanged: true structureIsReused:: Not Elapsed: 220.88729238510132ms
+Info 17   [15:38:39.485] Project '/dev/null/autoImportProviderProject1*' (AutoImportProvider)
+Info 18   [15:38:39.485] 	Files (120)
 
-Info 19   [15:19:08.415] -----------------------------------------------
-Info 20   [15:19:16.528] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 21   [15:19:16.569] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 2 structureChanged: false structureIsReused:: Completely Elapsed: 18.205374717712402ms
-Info 22   [15:19:16.569] Different program with same set of files
-Info 23   [15:19:26.093] DirectoryWatcher:: Triggered with /users/jessekelly/projects/io-ts-string-types/tests/Base.ts :: WatchInfo: /users/jessekelly/projects/io-ts-string-types/tests 1 undefined Config: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json WatchType: Wild card directory
-Info 24   [15:19:26.115] Elapsed:: 0.6907920837402344ms DirectoryWatcher:: Triggered with /users/jessekelly/projects/io-ts-string-types/tests/Base.ts :: WatchInfo: /users/jessekelly/projects/io-ts-string-types/tests 1 undefined Config: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json WatchType: Wild card directory
-Info 25   [15:19:26.115] DirectoryWatcher:: Triggered with /Users/jessekelly/projects/io-ts-string-types/tests/Base.ts :: WatchInfo: /Users/jessekelly/projects/io-ts-string-types/tests 1 undefined Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json WatchType: Failed Lookup Locations
-Info 26   [15:19:26.116] Elapsed:: 0.16062498092651367ms DirectoryWatcher:: Triggered with /Users/jessekelly/projects/io-ts-string-types/tests/Base.ts :: WatchInfo: /Users/jessekelly/projects/io-ts-string-types/tests 1 undefined Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json WatchType: Failed Lookup Locations
-Info 27   [15:19:26.279] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 28   [15:19:26.301] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 3 structureChanged: false structureIsReused:: Completely Elapsed: 21.301291942596436ms
-Info 29   [15:19:26.301] Different program with same set of files
-Info 30   [15:19:30.428] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 31   [15:19:30.467] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 4 structureChanged: false structureIsReused:: Completely Elapsed: 38.67325019836426ms
-Info 32   [15:19:30.469] Different program with same set of files
-Info 33   [15:19:34.722] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 34   [15:19:34.745] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 5 structureChanged: false structureIsReused:: Completely Elapsed: 23.274750232696533ms
-Info 35   [15:19:34.745] Different program with same set of files
-Info 36   [15:19:39.288] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 37   [15:19:39.315] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 6 structureChanged: false structureIsReused:: Completely Elapsed: 26.47154188156128ms
-Info 38   [15:19:39.315] Different program with same set of files
-Info 39   [15:19:39.329] getCompletionData: Get current token: 0.03554201126098633
-Info 40   [15:19:39.330] getCompletionData: Is inside comment: 0.11204195022583008
-Info 41   [15:19:39.330] getCompletionData: Get previous token: 0.11820840835571289
-Info 42   [15:19:39.335] getCompletionsAtPosition: isCompletionListBlocker: 0.3762078285217285
-Info 43   [15:19:39.343] getCompletionData: Semantic work: 7.29983377456665
-Info 44   [15:19:39.533] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 186.73245906829834
-Info 45   [15:19:41.924] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 46   [15:19:41.943] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 7 structureChanged: false structureIsReused:: Completely Elapsed: 18.60733413696289ms
-Info 47   [15:19:41.943] Different program with same set of files
-Info 48   [15:19:51.528] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 49   [15:19:51.557] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 8 structureChanged: false structureIsReused:: Completely Elapsed: 26.72795820236206ms
-Info 50   [15:19:51.557] Different program with same set of files
-Info 51   [15:20:29.098] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 52   [15:20:29.174] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 9 structureChanged: false structureIsReused:: Completely Elapsed: 74.49125003814697ms
-Info 53   [15:20:29.175] Different program with same set of files
-Info 54   [15:20:33.801] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 55   [15:20:33.827] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 10 structureChanged: false structureIsReused:: Completely Elapsed: 25.755290985107422ms
-Info 56   [15:20:33.827] Different program with same set of files
-Info 57   [15:20:37.034] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 58   [15:20:37.063] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 11 structureChanged: false structureIsReused:: Completely Elapsed: 28.79324960708618ms
-Info 59   [15:20:37.063] Different program with same set of files
-Info 60   [15:21:15.176] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 61   [15:21:15.519] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 12 structureChanged: false structureIsReused:: Completely Elapsed: 338.79612493515015ms
-Info 62   [15:21:15.519] Different program with same set of files
-Info 63   [15:21:20.083] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 64   [15:21:20.114] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 13 structureChanged: false structureIsReused:: Completely Elapsed: 30.24641704559326ms
-Info 65   [15:21:20.114] Different program with same set of files
-Info 66   [15:21:23.382] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 67   [15:21:23.402] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 14 structureChanged: false structureIsReused:: Completely Elapsed: 19.687084197998047ms
-Info 68   [15:21:23.402] Different program with same set of files
-Info 69   [15:21:24.118] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 70   [15:21:24.133] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 15 structureChanged: false structureIsReused:: Completely Elapsed: 14.274209022521973ms
-Info 71   [15:21:24.133] Different program with same set of files
-Info 72   [15:21:50.577] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 73   [15:21:50.645] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 16 structureChanged: false structureIsReused:: Completely Elapsed: 66.37249994277954ms
-Info 74   [15:21:50.645] Different program with same set of files
-Info 75   [15:21:52.463] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 76   [15:21:52.481] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 17 structureChanged: false structureIsReused:: Completely Elapsed: 17.208250045776367ms
-Info 77   [15:21:52.481] Different program with same set of files
-Info 78   [15:21:55.709] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 79   [15:21:55.727] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 18 structureChanged: false structureIsReused:: Completely Elapsed: 18.07745933532715ms
-Info 80   [15:21:55.727] Different program with same set of files
-Info 81   [15:21:58.532] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 82   [15:21:58.549] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 19 structureChanged: false structureIsReused:: Completely Elapsed: 16.799959182739258ms
-Info 83   [15:21:58.549] Different program with same set of files
-Info 84   [15:21:59.677] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 85   [15:21:59.701] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 20 structureChanged: false structureIsReused:: Completely Elapsed: 23.783999919891357ms
-Info 86   [15:21:59.701] Different program with same set of files
-Info 87   [15:22:05.619] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 88   [15:22:05.652] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 21 structureChanged: false structureIsReused:: Completely Elapsed: 30.631916999816895ms
-Info 89   [15:22:05.652] Different program with same set of files
-Info 90   [15:22:07.624] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 91   [15:22:07.647] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 22 structureChanged: false structureIsReused:: Completely Elapsed: 22.328875064849854ms
-Info 92   [15:22:07.647] Different program with same set of files
-Info 93   [15:22:10.460] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 94   [15:22:10.479] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 23 structureChanged: false structureIsReused:: Completely Elapsed: 18.777459144592285ms
-Info 95   [15:22:10.480] Different program with same set of files
-Info 96   [15:22:12.830] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 97   [15:22:12.850] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 24 structureChanged: false structureIsReused:: Completely Elapsed: 19.33437490463257ms
-Info 98   [15:22:12.850] Different program with same set of files
-Info 99   [15:22:13.243] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 100  [15:22:13.300] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 25 structureChanged: false structureIsReused:: Completely Elapsed: 56.5217080116272ms
-Info 101  [15:22:13.300] Different program with same set of files
-Info 102  [15:22:13.388] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 103  [15:22:13.397] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 26 structureChanged: false structureIsReused:: Completely Elapsed: 8.915457725524902ms
-Info 104  [15:22:13.397] Different program with same set of files
-Info 105  [15:22:13.605] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 106  [15:22:13.629] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 27 structureChanged: false structureIsReused:: Completely Elapsed: 24.346291065216064ms
-Info 107  [15:22:13.629] Different program with same set of files
-Info 108  [15:22:15.313] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 109  [15:22:15.334] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 28 structureChanged: false structureIsReused:: Completely Elapsed: 20.12445831298828ms
-Info 110  [15:22:15.334] Different program with same set of files
-Info 111  [15:22:15.335] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 112  [15:22:15.344] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 29 structureChanged: false structureIsReused:: Completely Elapsed: 9.581624984741211ms
-Info 113  [15:22:15.345] Different program with same set of files
-Info 114  [15:22:15.633] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 115  [15:22:15.648] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 30 structureChanged: false structureIsReused:: Completely Elapsed: 15.000375270843506ms
-Info 116  [15:22:15.648] Different program with same set of files
-Info 117  [15:22:15.649] getCompletionData: Get current token: 0.03054189682006836
-Info 118  [15:22:15.649] getCompletionData: Is inside comment: 0.008040904998779297
-Info 119  [15:22:15.649] getCompletionData: Get previous token: 0.11749982833862305
-Info 120  [15:22:15.649] getCompletionsAtPosition: isCompletionListBlocker: 0.007791996002197266
-Info 121  [15:22:15.673] getCompletionData: Semantic work: 22.36408281326294
-Info 122  [15:22:15.711] getCompletionsAtPosition: getCompletionEntriesFromSymbols: 37.26183319091797
-Info 123  [15:22:17.364] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 124  [15:22:17.381] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 31 structureChanged: false structureIsReused:: Completely Elapsed: 17.244291305541992ms
-Info 125  [15:22:17.382] Different program with same set of files
-Info 126  [15:22:18.508] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 127  [15:22:18.523] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 32 structureChanged: false structureIsReused:: Completely Elapsed: 14.511625289916992ms
-Info 128  [15:22:18.523] Different program with same set of files
-Info 129  [15:22:18.533] getCompletionData: Get current token: 0.0796670913696289
-Info 130  [15:22:18.533] getCompletionData: Is inside comment: 0.025040626525878906
-Info 131  [15:22:18.534] getCompletionData: Get previous token: 0.13237476348876953
-Info 132  [15:22:18.534] getCompletionsAtPosition: isCompletionListBlocker: 0.007125377655029297
-Info 133  [15:22:18.551] getCompletionData: Semantic work: 17.455041885375977
-Info 134  [15:22:18.576] getCompletionData: Get current token: 0.02504110336303711
-Info 135  [15:22:18.576] getCompletionData: Is inside comment: 0.004958629608154297
-Info 136  [15:22:18.576] getCompletionData: Get previous token: 0.04537487030029297
-Info 137  [15:22:18.576] getCompletionsAtPosition: isCompletionListBlocker: 0.0029997825622558594
-Info 138  [15:22:18.577] getCompletionData: Semantic work: 0.25254201889038086
-Info 139  [15:22:20.139] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 140  [15:22:20.157] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 33 structureChanged: false structureIsReused:: Completely Elapsed: 17.61945915222168ms
-Info 141  [15:22:20.158] Different program with same set of files
-Info 142  [15:22:34.655] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 143  [15:22:34.676] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 34 structureChanged: false structureIsReused:: Completely Elapsed: 17.657750129699707ms
-Info 144  [15:22:34.676] Different program with same set of files
-Info 145  [15:22:37.009] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 146  [15:22:37.028] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 35 structureChanged: false structureIsReused:: Completely Elapsed: 17.892500400543213ms
-Info 147  [15:22:37.028] Different program with same set of files
-Info 148  [15:22:42.006] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 149  [15:22:42.033] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 36 structureChanged: false structureIsReused:: Completely Elapsed: 20.22795867919922ms
-Info 150  [15:22:42.033] Different program with same set of files
-Info 151  [15:22:46.826] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 152  [15:22:46.842] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 37 structureChanged: false structureIsReused:: Completely Elapsed: 15.27287483215332ms
-Info 153  [15:22:46.842] Different program with same set of files
-Info 154  [15:22:58.480] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 155  [15:22:58.509] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 38 structureChanged: false structureIsReused:: Completely Elapsed: 28.119874954223633ms
-Info 156  [15:22:58.509] Different program with same set of files
-Info 157  [15:23:08.838] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 158  [15:23:08.859] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 39 structureChanged: false structureIsReused:: Completely Elapsed: 20.403542041778564ms
-Info 159  [15:23:08.859] Different program with same set of files
-Info 160  [15:23:11.222] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 161  [15:23:11.247] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 40 structureChanged: false structureIsReused:: Completely Elapsed: 23.906167030334473ms
-Info 162  [15:23:11.247] Different program with same set of files
-Info 163  [15:23:12.780] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 164  [15:23:12.798] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 41 structureChanged: false structureIsReused:: Completely Elapsed: 17.702749729156494ms
-Info 165  [15:23:12.798] Different program with same set of files
-Info 166  [15:23:15.776] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 167  [15:23:15.787] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 42 structureChanged: false structureIsReused:: Completely Elapsed: 10.41575002670288ms
-Info 168  [15:23:15.787] Different program with same set of files
-Info 169  [15:23:17.916] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 170  [15:23:18.050] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 43 structureChanged: false structureIsReused:: Completely Elapsed: 133.39129209518433ms
-Info 171  [15:23:18.050] Different program with same set of files
-Info 172  [15:24:01.780] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 173  [15:24:01.895] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 44 structureChanged: false structureIsReused:: Completely Elapsed: 113.12191724777222ms
-Info 174  [15:24:01.895] Different program with same set of files
-Info 175  [15:24:15.181] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 176  [15:24:15.217] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 45 structureChanged: false structureIsReused:: Completely Elapsed: 36.01637506484985ms
-Info 177  [15:24:15.217] Different program with same set of files
-Info 178  [15:24:21.253] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json
-Info 179  [15:24:21.272] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-string-types/tsconfig.json Version: 46 structureChanged: false structureIsReused:: Completely Elapsed: 17.549999713897705ms
-Info 180  [15:24:21.272] Different program with same set of files
+Info 19   [15:38:39.485] -----------------------------------------------
+Info 20   [15:39:00.310] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-strings/tsconfig.json
+Info 21   [15:39:00.340] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-strings/tsconfig.json Version: 2 structureChanged: false structureIsReused:: Completely Elapsed: 28.642749786376953ms
+Info 22   [15:39:00.340] Different program with same set of files
+Info 23   [15:39:01.766] forEachExternalModuleToImportFrom autoImportProvider: 5.070041179656982
+Info 24   [15:39:01.985] forEachExternalModuleToImportFrom autoImportProvider: 1.222249984741211
+Info 25   [15:39:02.520] forEachExternalModuleToImportFrom autoImportProvider: 1.359583854675293
+Info 26   [15:39:02.821] forEachExternalModuleToImportFrom autoImportProvider: 1.5070419311523438
+Info 27   [15:39:03.144] forEachExternalModuleToImportFrom autoImportProvider: 1.696709156036377
+Info 28   [15:39:03.435] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-strings/tsconfig.json
+Info 29   [15:39:03.458] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-strings/tsconfig.json Version: 3 structureChanged: false structureIsReused:: Completely Elapsed: 23.4149169921875ms
+Info 30   [15:39:03.459] Different program with same set of files
+Info 31   [15:39:03.507] forEachExternalModuleToImportFrom autoImportProvider: 0.6230831146240234
+Info 32   [15:39:04.804] Starting updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-strings/tsconfig.json
+Info 33   [15:39:04.828] Finishing updateGraphWorker: Project: /Users/jessekelly/projects/io-ts-strings/tsconfig.json Version: 4 structureChanged: false structureIsReused:: Completely Elapsed: 23.772541999816895ms
+Info 34   [15:39:04.829] Different program with same set of files
