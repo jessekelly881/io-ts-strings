@@ -48,7 +48,7 @@ export type PassportNumberFR = t.Branded<string, PassportNumberFRBrand>;
 
 export const PassportNumberFR = t.brand(
   t.string,
-  (s): s is PassportNumberFR => isPassportNumber(s),
+  (s): s is PassportNumberFR => isPassportNumber(s, "FR"),
   "PassportNumberFR"
 );
 
