@@ -1,0 +1,16 @@
+[15:14:40.535] Global cache location '/Users/jessekelly/Library/Caches/typescript/4.6', safe file path '/users/jessekelly/projects/io-ts-string-types/node_modules/typescript/lib/typingsafelist.json', types map path /users/jessekelly/projects/io-ts-string-types/node_modules/typescript/lib/typesmap.json
+[15:14:40.537] Processing cache location '/Users/jessekelly/Library/Caches/typescript/4.6'
+[15:14:40.537] Trying to find '/Users/jessekelly/Library/Caches/typescript/4.6/package.json'...
+[15:14:40.542] Finished processing cache location '/Users/jessekelly/Library/Caches/typescript/4.6'
+[15:14:40.542] Process id: 55879
+[15:14:40.542] NPM location: /Users/jessekelly/.nvm/versions/node/v14.17.0/bin/npm (explicit '--npmLocation' not  provided)
+[15:14:40.542] validateDefaultNpmLocation: false
+[15:14:40.542] Npm config file: /Users/jessekelly/Library/Caches/typescript/4.6/package.json
+[15:14:40.542] Updating types-registry npm package...
+[15:14:40.543] Exec: /Users/jessekelly/.nvm/versions/node/v14.17.0/bin/npm install --ignore-scripts types-registry@latest
+[15:14:40.551]     Failed. stdout:
+    stderr:
+    /bin/sh: /Users/jessekelly/.nvm/versions/node/v14.17.0/bin/npm: No such file or directory
+    
+[15:14:40.551] Updated types-registry npm package
+[15:14:40.551] Types registry file '/Users/jessekelly/Library/Caches/typescript/4.6/node_modules/types-registry/index.json' does not exist
