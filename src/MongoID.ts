@@ -1,5 +1,5 @@
 import * as t from "io-ts";
-import isMongoID from "validator/lib/isMongoID";
+import isMongoID from "validator/lib/isMongoId";
 
 /*
  * MongoDB Object ID

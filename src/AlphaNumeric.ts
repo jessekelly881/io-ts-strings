@@ -1,5 +1,5 @@
 import * as t from "io-ts";
-import isAlphaNumeric from "validator/lib/isAlphaNumeric";
+import isAlphaNumeric from "validator/lib/isAlphanumeric";
 
 interface AlphaNumericBrand {
   readonly AlphaNumeric: unique symbol;
