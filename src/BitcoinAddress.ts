@@ -1,14 +1,18 @@
 import * as t from "io-ts";
 import isBtcAddress from "validator/lib/isBtcAddress";
 
-export interface BitcoinAddressBrand {
+interface BitcoinAddressBrand {
   readonly BitcoinAddress: unique symbol;
 }
 
-export type BitcoinAddress = t.Branded<string, BitcoinAddressBrand>;
+type BitcoinAddress = t.Branded<string, BitcoinAddressBrand>;
 
-export const BitcoinAddress = t.brand(
+const BitcoinAddress = t.brand(
   t.string,
   (s): s is BitcoinAddress => isBtcAddress(s),
   "BitcoinAddress"
 );
+
+
+export { BitcoinAddress, BitcoinAddressBrand }
+export default BitcoinAddress;

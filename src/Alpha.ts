@@ -9,3 +9,4 @@ type Alpha = t.Branded<string, AlphaBrand>;
 const Alpha = t.brand(t.string, (s): s is Alpha => isAlpha(s), "Alpha");
 
 export { Alpha, AlphaBrand };
+export default Alpha;

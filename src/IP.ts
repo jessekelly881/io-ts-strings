@@ -46,5 +46,5 @@ const IPv6 = t.brand(
   "IPv6"
 );
 
+export { IP, IPBrand, IPv4, IPv4Brand, IPv6, IPv6Brand };
 export default IP;
-export { IPBrand, IPv4, IPv4Brand, IPv6, IPv6Brand };

@@ -1,14 +1,18 @@
 import * as t from "io-ts";
 import isMagnetURI from "validator/lib/isMagnetURI";
 
-export interface MagnetURIBrand {
+interface MagnetURIBrand {
   readonly MagnetURI: unique symbol;
 }
 
-export type MagnetURI = t.Branded<string, MagnetURIBrand>;
+type MagnetURI = t.Branded<string, MagnetURIBrand>;
 
-export const MagnetURI = t.brand(
+const MagnetURI = t.brand(
   t.string,
   (s): s is MagnetURI => isMagnetURI(s),
   "MagnetURI"
 );
+
+
+export { MagnetURI, MagnetURIBrand };
+export default MagnetURI;

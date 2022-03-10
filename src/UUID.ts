@@ -5,13 +5,13 @@ import isUUID from "validator/lib/isUUID";
  * Any UUID Version
  */
 
-export interface UUIDBrand {
+interface UUIDBrand {
   readonly UUID: unique symbol;
 }
 
-export type UUID = t.Branded<string, UUIDBrand>;
+type UUID = t.Branded<string, UUIDBrand>;
 
-export const UUID = t.brand(
+const UUID = t.brand(
   t.string,
   (s): s is UUID => isUUID(s),
   "UUID"
@@ -22,13 +22,13 @@ export const UUID = t.brand(
  * UUID v3
  */
 
-export interface UUIDv3Brand {
+interface UUIDv3Brand {
   readonly UUIDv3: unique symbol;
 }
 
-export type UUIDv3 = t.Branded<string, UUIDv3Brand>;
+type UUIDv3 = t.Branded<string, UUIDv3Brand>;
 
-export const UUIDv3 = t.brand(
+const UUIDv3 = t.brand(
   t.string,
   (s): s is UUIDv3 => isUUID(s, "3"),
   "UUIDv3"
@@ -39,13 +39,13 @@ export const UUIDv3 = t.brand(
  * UUID v4
  */
 
-export interface UUIDv4Brand {
+interface UUIDv4Brand {
   readonly UUIDv4: unique symbol;
 }
 
-export type UUIDv4 = t.Branded<string, UUIDv4Brand>;
+type UUIDv4 = t.Branded<string, UUIDv4Brand>;
 
-export const UUIDv4 = t.brand(
+const UUIDv4 = t.brand(
   t.string,
   (s): s is UUIDv4 => isUUID(s, "4"),
   "UUIDv4"
@@ -56,14 +56,28 @@ export const UUIDv4 = t.brand(
  * UUID v5
  */
 
-export interface UUIDv5Brand {
+interface UUIDv5Brand {
   readonly UUIDv5: unique symbol;
 }
 
-export type UUIDv5 = t.Branded<string, UUIDv5Brand>;
+type UUIDv5 = t.Branded<string, UUIDv5Brand>;
 
-export const UUIDv5 = t.brand(
+const UUIDv5 = t.brand(
   t.string,
   (s): s is UUIDv5 => isUUID(s, "5"),
   "UUIDv5"
 );
+
+
+export {
+  UUID,
+  UUIDBrand,
+  UUIDv3,
+  UUIDv3Brand,
+  UUIDv4,
+  UUIDv4Brand,
+  UUIDv5,
+  UUIDv5Brand
+}
+
+export default UUID;

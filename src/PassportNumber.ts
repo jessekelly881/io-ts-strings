@@ -6,13 +6,13 @@ import isPassportNumber from "validator/lib/isPassportNumber";
  * Any Country
  */
 
-export interface PassportNumberBrand {
+interface PassportNumberBrand {
   readonly PassportNumber: unique symbol;
 }
 
-export type PassportNumber = t.Branded<string, PassportNumberBrand>;
+type PassportNumber = t.Branded<string, PassportNumberBrand>;
 
-export const PassportNumber = t.brand(
+const PassportNumber = t.brand(
   t.string,
   (s): s is PassportNumber => isPassportNumber(s),
   "PassportNumber"
@@ -23,13 +23,13 @@ export const PassportNumber = t.brand(
  * United States
  */
 
-export interface PassportNumberUSBrand {
+interface PassportNumberUSBrand {
   readonly PassportNumberUS: unique symbol;
 }
 
-export type PassportNumberUS = t.Branded<string, PassportNumberUSBrand>;
+type PassportNumberUS = t.Branded<string, PassportNumberUSBrand>;
 
-export const PassportNumberUS = t.brand(
+const PassportNumberUS = t.brand(
   t.string,
   (s): s is PassportNumberUS => isPassportNumber(s, "US"),
   "PassportNumberUS"
@@ -40,13 +40,13 @@ export const PassportNumberUS = t.brand(
  * France
  */
 
-export interface PassportNumberFRBrand {
+interface PassportNumberFRBrand {
   readonly PassportNumberFR: unique symbol;
 }
 
-export type PassportNumberFR = t.Branded<string, PassportNumberFRBrand>;
+type PassportNumberFR = t.Branded<string, PassportNumberFRBrand>;
 
-export const PassportNumberFR = t.brand(
+const PassportNumberFR = t.brand(
   t.string,
   (s): s is PassportNumberFR => isPassportNumber(s, "FR"),
   "PassportNumberFR"
@@ -57,14 +57,28 @@ export const PassportNumberFR = t.brand(
  * Germany
  */
 
-export interface PassportNumberDEBrand {
+interface PassportNumberDEBrand {
   readonly PassportNumberDE: unique symbol;
 }
 
-export type PassportNumberDE = t.Branded<string, PassportNumberDEBrand>;
+type PassportNumberDE = t.Branded<string, PassportNumberDEBrand>;
 
-export const PassportNumberDE = t.brand(
+const PassportNumberDE = t.brand(
   t.string,
   (s): s is PassportNumberDE => isPassportNumber(s, "DE"),
   "PassportNumberDE"
 );
+
+
+export {
+  PassportNumber,
+  PassportNumberBrand,
+  PassportNumberDE,
+  PassportNumberDEBrand,
+  PassportNumberFR,
+  PassportNumberFRBrand,
+  PassportNumberUS,
+  PassportNumberUSBrand
+}
+
+export default PassportNumber;

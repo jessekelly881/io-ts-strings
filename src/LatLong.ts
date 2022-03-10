@@ -8,14 +8,18 @@ import isLatLong from "validator/lib/isLatLong";
  * lat,long or lat, long
  */
 
-export interface LatLongBrand {
+interface LatLongBrand {
   readonly LatLong: unique symbol;
 }
 
-export type LatLong = t.Branded<string, LatLongBrand>;
+type LatLong = t.Branded<string, LatLongBrand>;
 
-export const LatLong = t.brand(
+const LatLong = t.brand(
   t.string,
   (s): s is LatLong => isLatLong(s),
  "LatLong"
 );
+
+
+export { LatLong, LatLongBrand };
+export default LatLong;

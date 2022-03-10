@@ -5,13 +5,13 @@ import isPostalCode from "validator/lib/isPostalCode";
  * Any Country
  */
 
-export interface PostalCodeBrand {
+interface PostalCodeBrand {
   readonly PostalCode: unique symbol;
 }
 
-export type PostalCode = t.Branded<string, PostalCodeBrand>;
+type PostalCode = t.Branded<string, PostalCodeBrand>;
 
-export const PostalCode = t.brand(
+const PostalCode = t.brand(
   t.string,
   (s): s is PostalCode => isPostalCode(s, "any"),
   "PostalCode"
@@ -22,13 +22,13 @@ export const PostalCode = t.brand(
  * United States
  */
 
-export interface PostalCodeUSBrand {
+interface PostalCodeUSBrand {
   readonly PostalCodeUS: unique symbol;
 }
 
-export type PostalCodeUS = t.Branded<string, PostalCodeUSBrand>;
+type PostalCodeUS = t.Branded<string, PostalCodeUSBrand>;
 
-export const PostalCodeUS = t.brand(
+const PostalCodeUS = t.brand(
   t.string,
   (s): s is PostalCodeUS => isPostalCode(s, "US"),
   "PostalCodeUS"
@@ -39,13 +39,13 @@ export const PostalCodeUS = t.brand(
  * Germany
  */
 
-export interface PostalCodeDEBrand {
+interface PostalCodeDEBrand {
   readonly PostalCodeDE: unique symbol;
 }
 
-export type PostalCodeDE = t.Branded<string, PostalCodeDEBrand>;
+type PostalCodeDE = t.Branded<string, PostalCodeDEBrand>;
 
-export const PostalCodeDE = t.brand(
+const PostalCodeDE = t.brand(
   t.string,
   (s): s is PostalCodeDE => isPostalCode(s, "DE"),
   "PostalCodeDE"
@@ -56,15 +56,29 @@ export const PostalCodeDE = t.brand(
  * France
  */
 
-export interface PostalCodeFRBrand
+interface PostalCodeFRBrand
 {
   readonly PostalCodeFR: unique symbol;
 }
 
-export type PostalCodeFR = t.Branded<string, PostalCodeFRBrand>;
+type PostalCodeFR = t.Branded<string, PostalCodeFRBrand>;
 
-export const PostalCodeFR = t.brand(
+const PostalCodeFR = t.brand(
   t.string,
   (s): s is PostalCodeFR => isPostalCode(s, "FR"),
   "PostalCodeFR"
 );
+
+
+export {
+  PostalCode,
+  PostalCodeBrand,
+  PostalCodeDE,
+  PostalCodeDEBrand,
+  PostalCodeFR,
+  PostalCodeFRBrand,
+  PostalCodeUS,
+  PostalCodeUSBrand
+}
+
+export default PostalCode;

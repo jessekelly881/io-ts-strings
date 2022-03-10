@@ -9,3 +9,4 @@ type AlphaNumeric = t.Branded<string, AlphaNumericBrand>;
 const AlphaNumeric = t.brand(t.string, (s): s is AlphaNumeric => isAlphaNumeric(s), "AlphaNumeric");
 
 export { AlphaNumeric, AlphaNumericBrand };
+export default AlphaNumeric;

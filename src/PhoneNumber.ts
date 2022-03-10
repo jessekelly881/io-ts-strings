@@ -6,13 +6,13 @@ import isMobilePhone from "validator/lib/isMobilePhone";
  * Any Country
  */
 
-export interface PhoneNumberBrand {
+interface PhoneNumberBrand {
   readonly PhoneNumber: unique symbol;
 }
 
-export type PhoneNumber = t.Branded<string, PhoneNumberBrand>;
+type PhoneNumber = t.Branded<string, PhoneNumberBrand>;
 
-export const PhoneNumber = t.brand(
+const PhoneNumber = t.brand(
   t.string,
   (s): s is PhoneNumber => isMobilePhone(s),
   "PhoneNumber"
@@ -23,13 +23,13 @@ export const PhoneNumber = t.brand(
  * United States
  */
 
-export interface PhoneNumberUSBrand {
+interface PhoneNumberUSBrand {
   readonly PhoneNumberUS: unique symbol;
 }
 
-export type PhoneNumberUS = t.Branded<string, PhoneNumberUSBrand>;
+type PhoneNumberUS = t.Branded<string, PhoneNumberUSBrand>;
 
-export const PhoneNumberUS = t.brand(
+const PhoneNumberUS = t.brand(
   t.string,
   (s): s is PhoneNumberUS => isMobilePhone(s, "en-US"),
   "PhoneNumberUS"
@@ -40,13 +40,13 @@ export const PhoneNumberUS = t.brand(
  * France
  */
 
-export interface PhoneNumberFRBrand {
+interface PhoneNumberFRBrand {
   readonly PhoneNumberFR: unique symbol;
 }
 
-export type PhoneNumberFR = t.Branded<string, PhoneNumberFRBrand>;
+type PhoneNumberFR = t.Branded<string, PhoneNumberFRBrand>;
 
-export const PhoneNumberFR = t.brand(
+const PhoneNumberFR = t.brand(
   t.string,
   (s): s is PhoneNumberFR => isMobilePhone(s, "fr-FR"),
   "PhoneNumberFR"
@@ -57,14 +57,28 @@ export const PhoneNumberFR = t.brand(
  * Germany
  */
 
-export interface PhoneNumberDEBrand {
+interface PhoneNumberDEBrand {
   readonly PhoneNumberDE: unique symbol;
 }
 
-export type PhoneNumberDE = t.Branded<string, PhoneNumberDEBrand>;
+type PhoneNumberDE = t.Branded<string, PhoneNumberDEBrand>;
 
-export const PhoneNumberDE = t.brand(
+const PhoneNumberDE = t.brand(
   t.string,
   (s): s is PhoneNumberDE => isMobilePhone(s, "de-DE"),
   "PhoneNumberDE"
 );
+
+
+export {
+  PhoneNumber,
+  PhoneNumberBrand,
+  PhoneNumberDE,
+  PhoneNumberDEBrand,
+  PhoneNumberFR,
+  PhoneNumberFRBrand,
+  PhoneNumberUS,
+  PhoneNumberUSBrand
+}
+
+export default PhoneNumber;
