@@ -1,5 +1,7 @@
 # io-ts-strings
 
+[![Test](https://github.com/jessekelly881/io-ts-strings/actions/workflows/build.yml/badge.svg)](https://github.com/jessekelly881/io-ts-strings/actions/workflows/build.yml)
+
 String types for io-ts
 
 Currently implemented types:
@@ -20,6 +22,8 @@ Whenever a string type depends on locale(e.g phone number) multiple different co
 - The United States(US)
 - Germany(DE)
 - France(FR)
+
+## Examples
 
 ```js
 import * as t from 'io-ts'
