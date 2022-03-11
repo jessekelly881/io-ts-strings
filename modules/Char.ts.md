@@ -6,8 +6,7 @@ parent: Modules
 
 ## Char overview
 
-A string of length one. E.g. "a
-"
+A string of length one.
 
 Added in v1.0.0
 

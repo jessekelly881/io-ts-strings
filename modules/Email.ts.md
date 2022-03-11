@@ -29,6 +29,20 @@ Added in v1.0.0
 export declare const Email: t.BrandC<t.StringC, EmailBrand>
 ```
 
+**Example**
+
+```ts
+import * as t from 'io-ts'
+import { Email } from 'io-ts-strings'
+
+const codec = t.interface({
+  email: Email,
+})
+
+codec.decode({ email: 'john@b.com' }) // Right
+codec.decode({ email: 'john.com' }) // Left
+```
+
 Added in v1.0.0
 
 ## Email (type alias)
