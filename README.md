@@ -4,6 +4,10 @@
 
 String types for io-ts
 
+```bash
+npm install io-ts-string s
+```
+
 Currently implemented types:
 
 - Alpha
