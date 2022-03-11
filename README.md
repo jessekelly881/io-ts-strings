@@ -44,7 +44,7 @@ Currently implemented types:
 - PassportNumber (By country. E.g. PassportNumberUS)
 - PhoneNumber (By Country. E.g. PhoneNumberUS)
 - Port
-- PostalCode
+- PostalCode (By Country. E.g. PostalCodeUS)
 - SemVer (Semantic Version Number)
 - StrongPassword
 - Uppercase
