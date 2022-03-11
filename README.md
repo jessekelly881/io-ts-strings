@@ -66,6 +66,7 @@ Whenever a string type depends on locale(e.g phone number) multiple different co
 ```js
 import * as t from 'io-ts'
 import Email from 'io-ts-strings/dist/Email'
+// import { Email } from 'io-ts-strings'
 
 const codec = t.interface({
   email: Email,
