@@ -1,6 +1,5 @@
 /**
- * A string of length one. E.g. "a
- * "
+ * A string of length one.
  *
  * @since 1.0.0
  */

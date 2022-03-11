@@ -18,6 +18,17 @@ export type Email = t.Branded<string, EmailBrand>;
 
 /**
  * @since 1.0.0
+ *
+ * @example
+ * import * as t from 'io-ts'
+ * import Email from 'io-ts-strings/dist/Email'
+ *
+ * const codec = t.interface({
+ *   email: Email,
+ * })
+ *
+ * codec.decode({ email: 'john@b.com' }) // Right
+ * codec.decode({ email: 'john.com' }) // Left
  */
 export const Email = t.brand(
   t.string,
