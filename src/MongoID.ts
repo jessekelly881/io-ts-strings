@@ -1,15 +1,28 @@
+/**
+ * MongoDB Object ID
+ *
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isMongoID from "validator/lib/isMongoId";
 
-/*
- * MongoDB Object ID
+
+/**
+ * @since 1.0.0
  */
-interface MongoIDBrand {
+export interface MongoIDBrand {
   readonly MongoID: unique symbol;
 }
 
-type MongoID = t.Branded<string, MongoIDBrand>;
-const MongoID = t.brand(t.string, (s): s is MongoID => isMongoID(s), "MongoID");
+/**
+ * @since 1.0.0
+ */
+export type MongoID = t.Branded<string, MongoIDBrand>;
 
-export { MongoID, MongoIDBrand };
+/**
+ * @since 1.0.0
+ */
+export const MongoID = t.brand(t.string, (s): s is MongoID => isMongoID(s), "MongoID");
+
+
 export default MongoID;

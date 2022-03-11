@@ -1,18 +1,29 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isISSN from "validator/lib/isISSN";
 
-interface ISSNBrand {
+/**
+ * @since 1.0.0
+ */
+export interface ISSNBrand {
   readonly ISSN: unique symbol;
 }
 
-type ISSN = t.Branded<string, ISSNBrand>;
+/**
+ * @since 1.0.0
+ */
+export type ISSN = t.Branded<string, ISSNBrand>;
 
-const ISSN = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const ISSN = t.brand(
   t.string,
   (s): s is ISSN => isISSN(s),
   "ISSN"
 );
 
 
-export { ISSN, ISSNBrand };
 export default ISSN ;

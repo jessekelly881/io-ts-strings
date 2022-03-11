@@ -1,18 +1,30 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isPort from "validator/lib/isPort";
 
-interface PortBrand {
+
+/**
+ * @since 1.0.0
+ */
+export interface PortBrand {
   readonly Port: unique symbol;
 }
 
-type Port = t.Branded<string, PortBrand>;
+/**
+ * @since 1.0.0
+ */
+export type Port = t.Branded<string, PortBrand>;
 
-const Port = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const Port = t.brand(
   t.string,
   (s): s is Port => isPort(s),
   "Port"
 );
 
 
-export { Port, PortBrand };
 export default Port;

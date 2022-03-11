@@ -1,18 +1,30 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isStrongPassword from "validator/lib/isStrongPassword";
 
-interface StrongPasswordBrand {
+
+/**
+ * @since 1.0.0
+ */
+export interface StrongPasswordBrand {
   readonly StrongPassword: unique symbol;
 }
 
-type StrongPassword = t.Branded<string, StrongPasswordBrand>;
+/**
+ * @since 1.0.0
+ */
+export type StrongPassword = t.Branded<string, StrongPasswordBrand>;
 
-const StrongPassword = t.brand(
+ /**
+ * @since 1.0.0
+ */
+export const StrongPassword = t.brand(
   t.string,
   (s): s is StrongPassword => isStrongPassword(s),
   "StrongPassword"
 );
 
 
-export { StrongPassword, StrongPasswordBrand };
 export default StrongPassword;

@@ -1,84 +1,93 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isMobilePhone from "validator/lib/isMobilePhone";
 
 
-/*
- * Any Country
+/**
+ * @since 1.0.0
  */
-
-interface PhoneNumberBrand {
+export interface PhoneNumberBrand {
   readonly PhoneNumber: unique symbol;
 }
 
-type PhoneNumber = t.Branded<string, PhoneNumberBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PhoneNumber = t.Branded<string, PhoneNumberBrand>;
 
-const PhoneNumber = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PhoneNumber = t.brand(
   t.string,
   (s): s is PhoneNumber => isMobilePhone(s),
   "PhoneNumber"
 );
 
-
-/*
- * United States
+/**
+ * @since 1.0.0
  */
-
-interface PhoneNumberUSBrand {
+export interface PhoneNumberUSBrand {
   readonly PhoneNumberUS: unique symbol;
 }
 
-type PhoneNumberUS = t.Branded<string, PhoneNumberUSBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PhoneNumberUS = t.Branded<string, PhoneNumberUSBrand>;
 
-const PhoneNumberUS = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PhoneNumberUS = t.brand(
   t.string,
   (s): s is PhoneNumberUS => isMobilePhone(s, "en-US"),
   "PhoneNumberUS"
 );
 
-
-/*
- * France
+/**
+ * @since 1.0.0
  */
-
-interface PhoneNumberFRBrand {
+export interface PhoneNumberFRBrand {
   readonly PhoneNumberFR: unique symbol;
 }
 
-type PhoneNumberFR = t.Branded<string, PhoneNumberFRBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PhoneNumberFR = t.Branded<string, PhoneNumberFRBrand>;
 
-const PhoneNumberFR = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PhoneNumberFR = t.brand(
   t.string,
   (s): s is PhoneNumberFR => isMobilePhone(s, "fr-FR"),
   "PhoneNumberFR"
 );
 
-
-/*
- * Germany
+/**
+ * @since 1.0.0
  */
-
-interface PhoneNumberDEBrand {
+export interface PhoneNumberDEBrand {
   readonly PhoneNumberDE: unique symbol;
 }
 
-type PhoneNumberDE = t.Branded<string, PhoneNumberDEBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PhoneNumberDE = t.Branded<string, PhoneNumberDEBrand>;
 
-const PhoneNumberDE = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PhoneNumberDE = t.brand(
   t.string,
   (s): s is PhoneNumberDE => isMobilePhone(s, "de-DE"),
   "PhoneNumberDE"
 );
 
-
-export {
-  PhoneNumber,
-  PhoneNumberBrand,
-  PhoneNumberDE,
-  PhoneNumberDEBrand,
-  PhoneNumberFR,
-  PhoneNumberFRBrand,
-  PhoneNumberUS,
-  PhoneNumberUSBrand
-}
 
 export default PhoneNumber;

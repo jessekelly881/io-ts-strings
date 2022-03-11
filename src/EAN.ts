@@ -1,12 +1,24 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isEAN from "validator/lib/isEAN";
 
-interface EANBrand {
+/**
+ * @since 1.0.0
+ */
+export interface EANBrand {
   readonly EAN: unique symbol;
 }
 
-type EAN = t.Branded<string, EANBrand>;
-const EAN = t.brand(t.string, (s): s is EAN => isEAN(s), "EAN");
+/**
+ * @since 1.0.0
+ */
+export type EAN = t.Branded<string, EANBrand>;
 
-export { EAN, EANBrand };
+/**
+ * @since 1.0.0
+ */
+export const EAN = t.brand(t.string, (s): s is EAN => isEAN(s), "EAN");
+
 export default EAN;

@@ -1,3 +1,6 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isCreditCard from "validator/lib/isCreditCard";
 
@@ -8,61 +11,72 @@ const isMastercard = (str: string) =>
   /^5[1-5][0-9]{14}$/.test(str);
 
 
-/*
- * Any Debit/Credit Card Number
+/**
+ * @since 1.0.0
  */
-
-interface CreditCardBrand {
+export interface CreditCardBrand {
   readonly CreditCard: unique symbol;
 }
 
-type CreditCard = t.Branded<string, CreditCardBrand>;
-const CreditCard = t.brand(
+/**
+ * @since 1.0.0
+ */
+export type CreditCard = t.Branded<string, CreditCardBrand>;
+
+/**
+ * Any Debit/Credit Card Number
+ *
+ * @since 1.0.0
+ */
+export const CreditCard = t.brand(
   t.string,
   (s): s is CreditCard => isCreditCard(s),
   "CreditCard"
 );
 
-
-/*
- * Mastercard Card Number
+/**
+ * @since 1.0.0
  */
-
-interface MastercardBrand {
+export interface MastercardBrand {
   readonly Mastercard: unique symbol;
 }
 
-type Mastercard = t.Branded<string, MastercardBrand>;
-const Mastercard = t.brand(
+/**
+ * @since 1.0.0
+ */
+export type Mastercard = t.Branded<string, MastercardBrand>;
+
+/**
+ * Mastercard Card Number
+ *
+ * @since 1.0.0
+ */
+export const Mastercard = t.brand(
   t.string,
   (s): s is Mastercard => isMastercard(s),
   "Mastercard"
 );
 
-
-/*
- * Visa Card Number
+/**
+ * @since 1.0.0
  */
-
-interface VisaBrand {
+export interface VisaBrand {
   readonly Visa: unique symbol ;
 }
 
-type Visa = t.Branded<string, VisaBrand>;
-const Visa = t.brand(
+/**
+ * @since 1.0.0
+ */
+export type Visa = t.Branded<string, VisaBrand>;
+
+/**
+ * @since 1.0.0
+ */
+export const Visa = t.brand(
   t.string,
   (s): s is Visa => isVisa(s),
   "Visa"
 );
 
-
-export {
-  CreditCard,
-  CreditCardBrand,
-  Mastercard,
-  MastercardBrand,
-  Visa,
-  VisaBrand
-};
 
 export default CreditCard;

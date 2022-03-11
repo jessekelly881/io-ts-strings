@@ -1,84 +1,93 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isPostalCode from "validator/lib/isPostalCode";
 
-/*
- * Any Country
- */
 
-interface PostalCodeBrand {
+/**
+ * @since 1.0.0
+ */
+export interface PostalCodeBrand {
   readonly PostalCode: unique symbol;
 }
 
-type PostalCode = t.Branded<string, PostalCodeBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PostalCode = t.Branded<string, PostalCodeBrand>;
 
-const PostalCode = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PostalCode = t.brand(
   t.string,
   (s): s is PostalCode => isPostalCode(s, "any"),
   "PostalCode"
 );
 
-
-/*
- * United States
+/**
+ * @since 1.0.0
  */
-
-interface PostalCodeUSBrand {
+export interface PostalCodeUSBrand {
   readonly PostalCodeUS: unique symbol;
 }
 
-type PostalCodeUS = t.Branded<string, PostalCodeUSBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PostalCodeUS = t.Branded<string, PostalCodeUSBrand>;
 
-const PostalCodeUS = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PostalCodeUS = t.brand(
   t.string,
   (s): s is PostalCodeUS => isPostalCode(s, "US"),
   "PostalCodeUS"
 );
 
-
-/*
- * Germany
+/**
+ * @since 1.0.0
  */
-
-interface PostalCodeDEBrand {
+export interface PostalCodeDEBrand {
   readonly PostalCodeDE: unique symbol;
 }
 
-type PostalCodeDE = t.Branded<string, PostalCodeDEBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PostalCodeDE = t.Branded<string, PostalCodeDEBrand>;
 
-const PostalCodeDE = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PostalCodeDE = t.brand(
   t.string,
   (s): s is PostalCodeDE => isPostalCode(s, "DE"),
   "PostalCodeDE"
 );
 
-
-/*
- * France
+/**
+ * @since 1.0.0
  */
-
-interface PostalCodeFRBrand
-{
+export interface PostalCodeFRBrand {
   readonly PostalCodeFR: unique symbol;
 }
 
-type PostalCodeFR = t.Branded<string, PostalCodeFRBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PostalCodeFR = t.Branded<string, PostalCodeFRBrand>;
 
-const PostalCodeFR = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PostalCodeFR = t.brand(
   t.string,
   (s): s is PostalCodeFR => isPostalCode(s, "FR"),
   "PostalCodeFR"
 );
 
-
-export {
-  PostalCode,
-  PostalCodeBrand,
-  PostalCodeDE,
-  PostalCodeDEBrand,
-  PostalCodeFR,
-  PostalCodeFRBrand,
-  PostalCodeUS,
-  PostalCodeUSBrand
-}
 
 export default PostalCode;

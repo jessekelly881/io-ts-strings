@@ -1,84 +1,93 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isPassportNumber from "validator/lib/isPassportNumber";
 
 
-/*
- * Any Country
+ /**
+ * @since 1.0.0
  */
-
-interface PassportNumberBrand {
+export interface PassportNumberBrand {
   readonly PassportNumber: unique symbol;
 }
 
-type PassportNumber = t.Branded<string, PassportNumberBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PassportNumber = t.Branded<string, PassportNumberBrand>;
 
-const PassportNumber = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PassportNumber = t.brand(
   t.string,
   (s): s is PassportNumber => isPassportNumber(s),
   "PassportNumber"
 );
 
-
-/*
- * United States
+/**
+ * @since 1.0.0
  */
-
-interface PassportNumberUSBrand {
+export interface PassportNumberUSBrand {
   readonly PassportNumberUS: unique symbol;
 }
 
-type PassportNumberUS = t.Branded<string, PassportNumberUSBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PassportNumberUS = t.Branded<string, PassportNumberUSBrand>;
 
-const PassportNumberUS = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PassportNumberUS = t.brand(
   t.string,
   (s): s is PassportNumberUS => isPassportNumber(s, "US"),
   "PassportNumberUS"
 );
 
-
-/*
- * France
+/**
+ * @since 1.0.0
  */
-
-interface PassportNumberFRBrand {
+export interface PassportNumberFRBrand {
   readonly PassportNumberFR: unique symbol;
 }
 
-type PassportNumberFR = t.Branded<string, PassportNumberFRBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PassportNumberFR = t.Branded<string, PassportNumberFRBrand>;
 
-const PassportNumberFR = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PassportNumberFR = t.brand(
   t.string,
   (s): s is PassportNumberFR => isPassportNumber(s, "FR"),
   "PassportNumberFR"
 );
 
-
-/*
- * Germany
+/**
+ * @since 1.0.0
  */
-
-interface PassportNumberDEBrand {
+export interface PassportNumberDEBrand {
   readonly PassportNumberDE: unique symbol;
 }
 
-type PassportNumberDE = t.Branded<string, PassportNumberDEBrand>;
+/**
+ * @since 1.0.0
+ */
+export type PassportNumberDE = t.Branded<string, PassportNumberDEBrand>;
 
-const PassportNumberDE = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const PassportNumberDE = t.brand(
   t.string,
   (s): s is PassportNumberDE => isPassportNumber(s, "DE"),
   "PassportNumberDE"
 );
 
-
-export {
-  PassportNumber,
-  PassportNumberBrand,
-  PassportNumberDE,
-  PassportNumberDEBrand,
-  PassportNumberFR,
-  PassportNumberFRBrand,
-  PassportNumberUS,
-  PassportNumberUSBrand
-}
 
 export default PassportNumber;

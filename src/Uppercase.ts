@@ -1,18 +1,30 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isUppercase from "validator/lib/isUppercase";
 
-interface UppercaseBrand {
+
+/**
+ * @since 1.0.0
+ */
+export interface UppercaseBrand {
   readonly Uppercase: unique symbol;
 }
 
-type Uppercase = t.Branded<string, UppercaseBrand>;
+/**
+ * @since 1.0.0
+ */
+export type Uppercase = t.Branded<string, UppercaseBrand>;
 
-const Uppercase = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const Uppercase = t.brand(
   t.string,
   (s): s is Uppercase => isUppercase(s),
   "Uppercase"
 );
 
 
-export { Uppercase, UppercaseBrand };
 export default Uppercase;

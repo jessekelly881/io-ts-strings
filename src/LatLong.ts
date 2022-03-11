@@ -1,25 +1,32 @@
+/**
+ * A valid latlong string in the format "lat,long" or "lat, long"
+ *
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isLatLong from "validator/lib/isLatLong";
 
-/*
- * LatLong
- *
- * Check if the string is a valid latitude-longitude coordinate in the format
- * lat,long or lat, long
- */
 
-interface LatLongBrand {
+/**
+ * @since 1.0.0
+ */
+export interface LatLongBrand {
   readonly LatLong: unique symbol;
 }
 
-type LatLong = t.Branded<string, LatLongBrand>;
+/**
+ * @since 1.0.0
+ */
+export type LatLong = t.Branded<string, LatLongBrand>;
 
-const LatLong = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const LatLong = t.brand(
   t.string,
   (s): s is LatLong => isLatLong(s),
  "LatLong"
 );
 
 
-export { LatLong, LatLongBrand };
 export default LatLong;

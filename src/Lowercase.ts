@@ -1,18 +1,30 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isLowercase from "validator/lib/isLowercase";
 
-interface LowercaseBrand {
+
+/**
+ * @since 1.0.0
+ */
+export interface LowercaseBrand {
   readonly Lowercase: unique symbol;
 }
 
-type Lowercase = t.Branded<string, LowercaseBrand>;
+/**
+ * @since 1.0.0
+ */
+export type Lowercase = t.Branded<string, LowercaseBrand>;
 
-const Lowercase = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const Lowercase = t.brand(
   t.string,
   (s): s is Lowercase => isLowercase(s),
   "Lowercase"
 );
 
 
-export { Lowercase, LowercaseBrand };
 export default Lowercase;

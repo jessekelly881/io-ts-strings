@@ -1,18 +1,29 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isISIN from "validator/lib/isISIN";
 
-interface ISINBrand {
+/**
+ * @since 1.0.0
+ */
+export interface ISINBrand {
   readonly ISIN: unique symbol;
 }
 
-type ISIN = t.Branded<string, ISINBrand>;
+/**
+ * @since 1.0.0
+ */
+export type ISIN = t.Branded<string, ISINBrand>;
 
-const ISIN = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const ISIN = t.brand(
   t.string,
   (s): s is ISIN => isISIN(s),
   "ISIN"
 );
 
 
-export { ISIN, ISINBrand };
 export default ISIN;

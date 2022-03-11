@@ -1,18 +1,30 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isNumeric from "validator/lib/isNumeric";
 
-interface NumericBrand {
+
+/**
+ * @since 1.0.0
+ */
+export interface NumericBrand {
   readonly Numeric: unique symbol;
 }
 
-type Numeric = t.Branded<string, NumericBrand>;
+/**
+ * @since 1.0.0
+ */
+export type Numeric = t.Branded<string, NumericBrand>;
 
-const Numeric = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const Numeric = t.brand(
   t.string,
   (s): s is Numeric => isNumeric(s),
   "Numeric"
 );
 
 
-export { Numeric, NumericBrand };
 export default Numeric;

@@ -1,12 +1,24 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from 'io-ts'
 import isBIC from 'validator/lib/isBIC'
 
-interface BICBrand {
+/**
+ * @since 1.0.0
+ */
+export interface BICBrand {
   readonly BIC: unique symbol
 }
 
-type BIC = t.Branded<string, BICBrand>
-const BIC = t.brand(t.string, (s): s is BIC => isBIC(s), 'BIC')
+/**
+ * @since 1.0.0
+ */
+export type BIC = t.Branded<string, BICBrand>
 
-export { BIC, BICBrand }
+/**
+ * @since 1.0.0
+ */
+export const BIC = t.brand(t.string, (s): s is BIC => isBIC(s), 'BIC')
+
 export default BIC

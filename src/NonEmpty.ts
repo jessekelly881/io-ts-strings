@@ -1,18 +1,30 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isEmpty from "validator/lib/isEmpty";
 
-interface NonEmptyBrand {
+
+/**
+ * @since 1.0.0
+ */
+export interface NonEmptyBrand {
   readonly NonEmpty: unique symbol;
 }
 
-type NonEmpty = t.Branded<string, NonEmptyBrand>;
+/**
+ * @since 1.0.0
+ */
+export type NonEmpty = t.Branded<string, NonEmptyBrand>;
 
-const NonEmpty = t.brand(
+/**
+ * @since 1.0.0
+ */
+export const NonEmpty = t.brand(
   t.string,
   (s): s is NonEmpty => !isEmpty(s),
   "NonEmpty"
 );
 
 
-export { NonEmpty, NonEmptyBrand };
 export default NonEmpty;

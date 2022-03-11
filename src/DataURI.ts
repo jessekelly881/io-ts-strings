@@ -1,13 +1,25 @@
+/**
+ * @since 1.0.0
+ */
 import * as t from "io-ts";
 import isDataURI from "validator/lib/isDataURI";
 
-interface DataURIBrand {
+/**
+ * @since 1.0.0
+ */
+export interface DataURIBrand {
   readonly DataURI: unique symbol;
 }
 
-type DataURI = t.Branded<string, DataURIBrand>;
-const DataURI = t.brand(t.string, (s): s is DataURI => isDataURI(s), "DataURI");
+/**
+ * @since 1.0.0
+ */
+export type DataURI = t.Branded<string, DataURIBrand>;
+
+/**
+ * @since 1.0.0
+ */
+export const DataURI = t.brand(t.string, (s): s is DataURI => isDataURI(s), "DataURI");
 
 
-export { DataURI, DataURIBrand };
 export default DataURI;
