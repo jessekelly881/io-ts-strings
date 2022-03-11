@@ -21,7 +21,7 @@ export type Email = t.Branded<string, EmailBrand>;
  *
  * @example
  * import * as t from 'io-ts'
- * import Email from 'io-ts-strings/dist/Email'
+ * import { Email } from 'io-ts-strings'
  *
  * const codec = t.interface({
  *   email: Email,
