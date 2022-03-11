@@ -39,6 +39,7 @@ export * from './Port';
 export * from './PostalCode';
 export * from './SemVer';
 export * from './StrongPassword';
+export * from './SVG';
 export * from './Uppercase';
 export * from './URL';
 export * from './UUID';
