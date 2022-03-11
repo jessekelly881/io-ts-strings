@@ -5,7 +5,7 @@
 String types for io-ts
 
 ```bash
-npm install io-ts-string s
+npm install io-ts-strings
 ```
 
 Currently implemented types:
