@@ -10,6 +10,7 @@ import isBase64 from "validator/lib/isBase64";
 
 
 /**
+ * @category types
  * @since 1.0.0
  */
 export interface Base32Brand {
@@ -17,6 +18,7 @@ export interface Base32Brand {
 }
 
 /**
+ * @category types
  * @since 1.0.0
  */
 export interface Base58Brand {
@@ -24,6 +26,7 @@ export interface Base58Brand {
 }
 
 /**
+ * @category types
  * @since 1.0.0
  */
 export interface Base64Brand {
@@ -33,16 +36,19 @@ export interface Base64Brand {
 
 
 /**
+ * @category types
  * @since 1.0.0
  */
 export type Base32 = t.Branded<string, Base32Brand>;
 
 /**
+ * @category types
  * @since 1.0.0
  */
 export type Base58 = t.Branded<string, Base58Brand>;
 
 /**
+ * @category types
  * @since 1.0.0
  */
 export type Base64 = t.Branded<string, Base64Brand>;
@@ -50,16 +56,19 @@ export type Base64 = t.Branded<string, Base64Brand>;
 
 
 /**
+ * @category brands
  * @since 1.0.0
  */
 export const Base32 = t.brand(t.string, (s): s is Base32 => isBase32(s), "Base32");
 
 /**
+ * @category brands
  * @since 1.0.0
  */
 export const Base58 = t.brand(t.string, (s): s is Base58 => isBase58(s), "Base58");
 
 /**
+ * @category brands
  * @since 1.0.0
  */
 export const Base64 = t.brand(t.string, (s): s is Base64 => isBase64(s), "Base64");
@@ -81,13 +90,13 @@ const isBrand = (b: BrandCode) => ({
 
 
 /**
+ * @category decoders
  * @since 1.1.0
  */
 export const baseDecoder = <S extends string, B extends BrandCode = "32">(brand: B = "32" as B):
   D.Decoder<S, t.Branded<S, BrandMap[B]>> => pipe(
     D.string,
-    D.refine((x): x is t.Branded<S, BrandMap[B]> => isBrand(brand)(x), "Base")
-  )
+    D.refine((x): x is t.Branded<S, BrandMap[B]> => isBrand(brand)(x), "Base"))
 
 
 export default Base32;

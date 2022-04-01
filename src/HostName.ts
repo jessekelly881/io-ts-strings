@@ -7,6 +7,7 @@ import isHostName from "is-valid-host";
 import { pipe } from "fp-ts/lib/function";
 
 /**
+ * @category types
  * @since 1.0.0
  */
 export interface HostNameBrand {
@@ -14,21 +15,24 @@ export interface HostNameBrand {
 }
 
 /**
+ * @category types
  * @since 1.0.0
  */
 export type HostName = t.Branded<string, HostNameBrand>;
 
 /**
+ * @category brands
  * @since 1.0.0
  */
 export const HostName = t.brand(t.string, (s): s is HostName => isHostName(s), "HostName");
 
 /**
+ * @category decoders
  * @since 1.1.0
  */
 export const hostNameDecoder = <S extends string>(): D.Decoder<S, t.Branded<S, HostName>> => pipe(
   D.string,
-  D.refine((x): x is S & t.Brand<HostName> => isHostName(x), "HostName")
+  D.refine((x): x is t.Branded<A, HostName> => isHostName(x), "HostName")
 )
 
 
