@@ -16,6 +16,7 @@ Added in v1.0.0
   - [HSL](#hsl)
   - [HSL (type alias)](#hsl-type-alias)
   - [HSLBrand (interface)](#hslbrand-interface)
+  - [hslDecoder](#hsldecoder)
 
 ---
 
@@ -52,3 +53,13 @@ export interface HSLBrand {
 ```
 
 Added in v1.0.0
+
+## hslDecoder
+
+**Signature**
+
+```ts
+export declare const hslDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, HSLBrand>>
+```
+
+Added in v1.1.0

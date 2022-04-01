@@ -18,6 +18,8 @@ Added in v1.0.0
   - [Char](#char)
   - [Char (type alias)](#char-type-alias)
   - [CharBrand (interface)](#charbrand-interface)
+  - [charDecoder](#chardecoder)
+  - [isChar](#ischar)
 
 ---
 
@@ -51,6 +53,26 @@ Added in v1.0.0
 export interface CharBrand {
   readonly Char: unique symbol
 }
+```
+
+Added in v1.0.0
+
+## charDecoder
+
+**Signature**
+
+```ts
+export declare const charDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, t.Branded<string, CharBrand>>>
+```
+
+Added in v1.1.0
+
+## isChar
+
+**Signature**
+
+```ts
+export declare const isChar: (s: string) => boolean
 ```
 
 Added in v1.0.0

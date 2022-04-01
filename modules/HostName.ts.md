@@ -16,6 +16,7 @@ Added in v1.0.0
   - [HostName](#hostname)
   - [HostName (type alias)](#hostname-type-alias)
   - [HostNameBrand (interface)](#hostnamebrand-interface)
+  - [hostNameDecoder](#hostnamedecoder)
 
 ---
 
@@ -52,3 +53,16 @@ export interface HostNameBrand {
 ```
 
 Added in v1.0.0
+
+## hostNameDecoder
+
+**Signature**
+
+```ts
+export declare const hostNameDecoder: <S extends string>() => D.Decoder<
+  S,
+  t.Branded<S, t.Branded<string, HostNameBrand>>
+>
+```
+
+Added in v1.1.0

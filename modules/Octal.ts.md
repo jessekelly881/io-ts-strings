@@ -16,6 +16,7 @@ Added in v1.0.0
   - [Octal](#octal)
   - [Octal (type alias)](#octal-type-alias)
   - [OctalBrand (interface)](#octalbrand-interface)
+  - [octalDecoder](#octaldecoder)
 
 ---
 
@@ -52,3 +53,13 @@ export interface OctalBrand {
 ```
 
 Added in v1.0.0
+
+## octalDecoder
+
+**Signature**
+
+```ts
+export declare const octalDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, OctalBrand>>
+```
+
+Added in v1.1.0

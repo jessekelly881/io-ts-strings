@@ -16,6 +16,7 @@ Added in v1.0.0
   - [JWT](#jwt)
   - [JWT (type alias)](#jwt-type-alias)
   - [JWTBrand (interface)](#jwtbrand-interface)
+  - [jwtDecoder](#jwtdecoder)
 
 ---
 
@@ -52,3 +53,13 @@ export interface JWTBrand {
 ```
 
 Added in v1.0.0
+
+## jwtDecoder
+
+**Signature**
+
+```ts
+export declare const jwtDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, JWTBrand>>
+```
+
+Added in v1.1.0

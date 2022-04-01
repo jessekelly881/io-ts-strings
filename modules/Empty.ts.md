@@ -16,6 +16,7 @@ Added in v1.0.0
   - [Empty](#empty)
   - [Empty (type alias)](#empty-type-alias)
   - [EmptyBrand (interface)](#emptybrand-interface)
+  - [emptyDecoder](#emptydecoder)
 
 ---
 
@@ -52,3 +53,13 @@ export interface EmptyBrand {
 ```
 
 Added in v1.0.0
+
+## emptyDecoder
+
+**Signature**
+
+```ts
+export declare const emptyDecoder: D.Decoder<string, t.Branded<string, EmptyBrand>>
+```
+
+Added in v1.1.0

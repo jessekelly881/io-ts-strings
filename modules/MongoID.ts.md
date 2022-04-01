@@ -18,6 +18,7 @@ Added in v1.0.0
   - [MongoID](#mongoid)
   - [MongoID (type alias)](#mongoid-type-alias)
   - [MongoIDBrand (interface)](#mongoidbrand-interface)
+  - [mongoIDDecoder](#mongoiddecoder)
 
 ---
 
@@ -54,3 +55,13 @@ export interface MongoIDBrand {
 ```
 
 Added in v1.0.0
+
+## mongoIDDecoder
+
+**Signature**
+
+```ts
+export declare const mongoIDDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, MongoIDBrand>>
+```
+
+Added in v1.1.0

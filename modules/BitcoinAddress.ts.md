@@ -16,6 +16,7 @@ Added in v1.0.0
   - [BitcoinAddress](#bitcoinaddress)
   - [BitcoinAddress (type alias)](#bitcoinaddress-type-alias)
   - [BitcoinAddressBrand (interface)](#bitcoinaddressbrand-interface)
+  - [bitcoinAddressDecoder](#bitcoinaddressdecoder)
 
 ---
 
@@ -52,3 +53,16 @@ export interface BitcoinAddressBrand {
 ```
 
 Added in v1.0.0
+
+## bitcoinAddressDecoder
+
+**Signature**
+
+```ts
+export declare const bitcoinAddressDecoder: <S extends string>() => D.Decoder<
+  S,
+  t.Branded<S, t.Branded<string, BitcoinAddressBrand>>
+>
+```
+
+Added in v1.1.0

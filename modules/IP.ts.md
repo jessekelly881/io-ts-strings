@@ -22,6 +22,7 @@ Added in v1.0.0
   - [IPv6](#ipv6)
   - [IPv6 (type alias)](#ipv6-type-alias)
   - [IPv6Brand (interface)](#ipv6brand-interface)
+  - [ipDecoder](#ipdecoder)
 
 ---
 
@@ -122,3 +123,15 @@ export interface IPv6Brand {
 ```
 
 Added in v1.0.0
+
+## ipDecoder
+
+**Signature**
+
+```ts
+export declare const ipDecoder: <S extends string, B extends '4' | '6'>(
+  code: B
+) => D.Decoder<S, S & t.Brand<t.Branded<string, IPBrand>> & t.Brand<IPMap[B]>>
+```
+
+Added in v1.1.0

@@ -16,6 +16,7 @@ Added in v1.0.0
   - [EAN](#ean)
   - [EAN (type alias)](#ean-type-alias)
   - [EANBrand (interface)](#eanbrand-interface)
+  - [eanDecoder](#eandecoder)
 
 ---
 
@@ -52,3 +53,13 @@ export interface EANBrand {
 ```
 
 Added in v1.0.0
+
+## eanDecoder
+
+**Signature**
+
+```ts
+export declare const eanDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, EANBrand>>
+```
+
+Added in v1.1.0

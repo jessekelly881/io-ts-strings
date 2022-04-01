@@ -16,6 +16,7 @@ Added in v1.0.0
   - [Numeric](#numeric)
   - [Numeric (type alias)](#numeric-type-alias)
   - [NumericBrand (interface)](#numericbrand-interface)
+  - [numericDecoder](#numericdecoder)
 
 ---
 
@@ -52,3 +53,13 @@ export interface NumericBrand {
 ```
 
 Added in v1.0.0
+
+## numericDecoder
+
+**Signature**
+
+```ts
+export declare const numericDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, NumericBrand>>
+```
+
+Added in v1.1.0

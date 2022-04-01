@@ -16,6 +16,7 @@ Added in v1.0.0
   - [BIC](#bic)
   - [BIC (type alias)](#bic-type-alias)
   - [BICBrand (interface)](#bicbrand-interface)
+  - [bicDecoder](#bicdecoder)
 
 ---
 
@@ -52,3 +53,13 @@ export interface BICBrand {
 ```
 
 Added in v1.0.0
+
+## bicDecoder
+
+**Signature**
+
+```ts
+export declare const bicDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, BICBrand>>
+```
+
+Added in v1.1.0

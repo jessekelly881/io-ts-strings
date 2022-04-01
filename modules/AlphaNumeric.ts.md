@@ -16,6 +16,7 @@ Added in v1.0.0
   - [AlphaNumeric](#alphanumeric)
   - [AlphaNumeric (type alias)](#alphanumeric-type-alias)
   - [AlphaNumericBrand (interface)](#alphanumericbrand-interface)
+  - [alphaNumericDecoder](#alphanumericdecoder)
 
 ---
 
@@ -52,3 +53,13 @@ export interface AlphaNumericBrand {
 ```
 
 Added in v1.0.0
+
+## alphaNumericDecoder
+
+**Signature**
+
+```ts
+export declare const alphaNumericDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, AlphaNumericBrand>>
+```
+
+Added in v1.1.0

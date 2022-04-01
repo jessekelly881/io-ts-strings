@@ -16,6 +16,7 @@ Added in v1.0.0
   - [Email](#email)
   - [Email (type alias)](#email-type-alias)
   - [EmailBrand (interface)](#emailbrand-interface)
+  - [emailDecoder](#emaildecoder)
 
 ---
 
@@ -66,3 +67,13 @@ export interface EmailBrand {
 ```
 
 Added in v1.0.0
+
+## emailDecoder
+
+**Signature**
+
+```ts
+export declare const emailDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, t.Branded<string, EmailBrand>>>
+```
+
+Added in v1.1.0

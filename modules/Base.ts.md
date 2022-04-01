@@ -22,6 +22,7 @@ Added in v1.0.0
   - [Base64](#base64)
   - [Base64 (type alias)](#base64-type-alias)
   - [Base64Brand (interface)](#base64brand-interface)
+  - [baseDecoder](#basedecoder)
 
 ---
 
@@ -122,3 +123,15 @@ export interface Base64Brand {
 ```
 
 Added in v1.0.0
+
+## baseDecoder
+
+**Signature**
+
+```ts
+export declare const baseDecoder: <S extends string, B extends '32' | '58' | '64' = '32'>(
+  brand?: B
+) => D.Decoder<S, t.Branded<S, BrandMap[B]>>
+```
+
+Added in v1.1.0

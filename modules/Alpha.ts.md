@@ -16,6 +16,7 @@ Added in v1.0.0
   - [Alpha](#alpha)
   - [Alpha (type alias)](#alpha-type-alias)
   - [AlphaBrand (interface)](#alphabrand-interface)
+  - [alphaDecoder](#alphadecoder)
 
 ---
 
@@ -52,3 +53,13 @@ export interface AlphaBrand {
 ```
 
 Added in v1.0.0
+
+## alphaDecoder
+
+**Signature**
+
+```ts
+export declare const alphaDecoder: <S extends unknown>() => D.Decoder<S, t.Branded<S, AlphaBrand>>
+```
+
+Added in v1.1.0

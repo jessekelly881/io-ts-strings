@@ -16,6 +16,7 @@ Added in v1.0.0
   - [Ascii](#ascii)
   - [Ascii (type alias)](#ascii-type-alias)
   - [AsciiBrand (interface)](#asciibrand-interface)
+  - [asciiDecoder](#asciidecoder)
 
 ---
 
@@ -52,3 +53,13 @@ export interface AsciiBrand {
 ```
 
 Added in v1.0.0
+
+## asciiDecoder
+
+**Signature**
+
+```ts
+export declare const asciiDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, AsciiBrand>>
+```
+
+Added in v1.1.0
