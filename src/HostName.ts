@@ -32,7 +32,7 @@ export const HostName = t.brand(t.string, (s): s is HostName => isHostName(s), "
  */
 export const hostNameDecoder = <S extends string>(): D.Decoder<S, t.Branded<S, HostName>> => pipe(
   D.string,
-  D.refine((x): x is t.Branded<A, HostName> => isHostName(x), "HostName")
+  D.refine((x): x is t.Branded<S, HostName> => isHostName(x), "HostName")
 )
 
 
