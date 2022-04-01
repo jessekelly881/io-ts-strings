@@ -1,8 +1,11 @@
 /**
  * @since 1.0.0
  */
+import { pipe } from "fp-ts/lib/function";
 import * as t from "io-ts";
+import * as D from "io-ts/Decoder";
 import isIP from "validator/lib/isIP";
+
 
 
 /**
@@ -11,6 +14,22 @@ import isIP from "validator/lib/isIP";
 export interface IPBrand {
   readonly IP: unique symbol;
 }
+
+/**
+ * @since 1.0.0
+ */
+export interface IPv4Brand {
+  readonly IPv4: unique symbol;
+}
+
+/**
+ * @since 1.0.0
+ */
+export interface IPv6Brand {
+  readonly IPv6: unique symbol;
+}
+
+
 
 /**
  * @since 1.0.0
@@ -29,13 +48,6 @@ export const IP = t.brand(
 /**
  * @since 1.0.0
  */
-export interface IPv4Brand {
-  readonly IPv4: unique symbol;
-}
-
-/**
- * @since 1.0.0
- */
 export type IPv4 = t.Branded<string, IPv4Brand>;
 
 /**
@@ -50,13 +62,6 @@ export const IPv4 = t.brand(
 /**
  * @since 1.0.0
  */
-export interface IPv6Brand {
-  readonly IPv6: unique symbol;
-}
-
-/**
- * @since 1.0.0
- */
 export type IPv6 = t.Branded<string, IPv6Brand>;
 
 /**
@@ -67,6 +72,25 @@ export const IPv6 = t.brand(
   (s): s is IPv6 => isIP(s, "6"),
   "IPv6"
 );
+
+
+
+type IPMap = {
+  "4": IPv4Brand,
+  "6": IPv6Brand
+}
+
+type IPCode = keyof IPMap;
+
+
+/**
+ * @since 1.1.0
+ */
+export const ipDecoder = <S extends string, B extends IPCode>(code: B):
+  D.Decoder<S, S & t.Brand<IP> & t.Brand<IPMap[B]>> => pipe(
+    D.string,
+    D.refine((x): x is S & t.Brand<IP> & t.Brand<IPMap[B]> => isIP(x, code), "IP")
+  )
 
 
 export default IP;
