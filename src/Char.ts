@@ -15,7 +15,7 @@ export interface CharBrand {
   readonly Char: unique symbol;
 }
 
-export const isChar = (s: string) => isLength(s, { min: 1, max: 1 });
+export const isChar = (s: string): boolean => isLength(s, { min: 1, max: 1 });
 
 /**
  * @since 1.0.0
