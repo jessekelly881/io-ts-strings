@@ -2,7 +2,9 @@
  * @since 1.0.0
  */
 import * as t from "io-ts";
+import * as D from "io-ts/Decoder";
 import isEmpty from "validator/lib/isEmpty";
+import { pipe } from 'fp-ts/function';
 
 
 /**
@@ -25,6 +27,15 @@ export const NonEmpty = t.brand(
   (s): s is NonEmpty => !isEmpty(s),
   "NonEmpty"
 );
+
+/**
+ * @category decoders
+ * @since 1.1.0
+ */
+export const nonEmptyDecoder = <S extends string>(): D.Decoder<S, t.Branded<S, NonEmptyBrand>> => pipe(
+  D.fromRefinement((x): x is t.Branded<S, NonEmptyBrand> => !isEmpty(x), "NonEmpty")
+)
+
 
 
 export default NonEmpty;
