@@ -32,9 +32,9 @@ export const JWT = t.brand(
 /**
  * @since 1.1.0
  */
-export const asciiDecoder = <S extends string>(): D.Decoder<S, JWT> => pipe(
+export const jwtDecoder = <S extends string>(): D.Decoder<S, t.Branded<S, JWTBrand>> => pipe(
   D.string,
-  D.refine((x): x is S & JWT => isJWT(x), "Ascii")
+  D.refine((x): x is t.Branded<S, JWTBrand> => isJWT(x), "JWT")
 )
 
 

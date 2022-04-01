@@ -90,13 +90,4 @@ export const UUIDv5 = t.brand(
 );
 
 
-type BrandMap = {
-  "3": UUIDv3Brand,
-  "4": UUIDv4Brand,
-  "5": UUIDv5Brand
-}
-
-type Code = keyof BrandMap;
-
-
 export default UUID;
