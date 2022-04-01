@@ -12,14 +12,17 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
-- [utils](#utils)
+- [brands](#brands)
   - [EthereumAddress](#ethereumaddress)
+- [decoders](#decoders)
+  - [ethereumAddressDecoder](#ethereumaddressdecoder)
+- [types](#types)
   - [EthereumAddress (type alias)](#ethereumaddress-type-alias)
   - [EthereumAddressBrand (interface)](#ethereumaddressbrand-interface)
 
 ---
 
-# utils
+# brands
 
 ## EthereumAddress
 
@@ -30,6 +33,20 @@ export declare const EthereumAddress: t.BrandC<t.StringC, EthereumAddressBrand>
 ```
 
 Added in v1.0.0
+
+# decoders
+
+## ethereumAddressDecoder
+
+**Signature**
+
+```ts
+export declare const ethereumAddressDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, EthereumAddressBrand>>
+```
+
+Added in v1.1.0
+
+# types
 
 ## EthereumAddress (type alias)
 

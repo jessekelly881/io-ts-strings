@@ -12,14 +12,17 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
-- [utils](#utils)
+- [brand](#brand)
   - [HexColor](#hexcolor)
+- [decoders](#decoders)
+  - [hexColorDecoder](#hexcolordecoder)
+- [types](#types)
   - [HexColor (type alias)](#hexcolor-type-alias)
   - [HexColorBrand (interface)](#hexcolorbrand-interface)
 
 ---
 
-# utils
+# brand
 
 ## HexColor
 
@@ -30,6 +33,23 @@ export declare const HexColor: t.BrandC<t.StringC, HexColorBrand>
 ```
 
 Added in v1.0.0
+
+# decoders
+
+## hexColorDecoder
+
+**Signature**
+
+```ts
+export declare const hexColorDecoder: <S extends string>() => D.Decoder<
+  S,
+  t.Branded<S, t.Branded<string, HexColorBrand>>
+>
+```
+
+Added in v1.1.0
+
+# types
 
 ## HexColor (type alias)
 

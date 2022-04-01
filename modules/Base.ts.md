@@ -12,21 +12,23 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
-- [utils](#utils)
+- [brands](#brands)
   - [Base32](#base32)
+  - [Base58](#base58)
+  - [Base64](#base64)
+- [decoders](#decoders)
+  - [baseDecoder](#basedecoder)
+- [types](#types)
   - [Base32 (type alias)](#base32-type-alias)
   - [Base32Brand (interface)](#base32brand-interface)
-  - [Base58](#base58)
   - [Base58 (type alias)](#base58-type-alias)
   - [Base58Brand (interface)](#base58brand-interface)
-  - [Base64](#base64)
   - [Base64 (type alias)](#base64-type-alias)
   - [Base64Brand (interface)](#base64brand-interface)
-  - [baseDecoder](#basedecoder)
 
 ---
 
-# utils
+# brands
 
 ## Base32
 
@@ -37,6 +39,42 @@ export declare const Base32: t.BrandC<t.StringC, Base32Brand>
 ```
 
 Added in v1.0.0
+
+## Base58
+
+**Signature**
+
+```ts
+export declare const Base58: t.BrandC<t.StringC, Base58Brand>
+```
+
+Added in v1.0.0
+
+## Base64
+
+**Signature**
+
+```ts
+export declare const Base64: t.BrandC<t.StringC, Base64Brand>
+```
+
+Added in v1.0.0
+
+# decoders
+
+## baseDecoder
+
+**Signature**
+
+```ts
+export declare const baseDecoder: <S extends string, B extends '32' | '58' | '64' = '32'>(
+  brand?: B
+) => D.Decoder<S, t.Branded<S, BrandMap[B]>>
+```
+
+Added in v1.1.0
+
+# types
 
 ## Base32 (type alias)
 
@@ -56,16 +94,6 @@ Added in v1.0.0
 export interface Base32Brand {
   readonly Base32: unique symbol
 }
-```
-
-Added in v1.0.0
-
-## Base58
-
-**Signature**
-
-```ts
-export declare const Base58: t.BrandC<t.StringC, Base58Brand>
 ```
 
 Added in v1.0.0
@@ -92,16 +120,6 @@ export interface Base58Brand {
 
 Added in v1.0.0
 
-## Base64
-
-**Signature**
-
-```ts
-export declare const Base64: t.BrandC<t.StringC, Base64Brand>
-```
-
-Added in v1.0.0
-
 ## Base64 (type alias)
 
 **Signature**
@@ -123,15 +141,3 @@ export interface Base64Brand {
 ```
 
 Added in v1.0.0
-
-## baseDecoder
-
-**Signature**
-
-```ts
-export declare const baseDecoder: <S extends string, B extends '32' | '58' | '64' = '32'>(
-  brand?: B
-) => D.Decoder<S, t.Branded<S, BrandMap[B]>>
-```
-
-Added in v1.1.0

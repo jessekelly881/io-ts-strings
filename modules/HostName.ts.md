@@ -12,15 +12,17 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
-- [utils](#utils)
+- [brands](#brands)
   - [HostName](#hostname)
+- [decoders](#decoders)
+  - [hostNameDecoder](#hostnamedecoder)
+- [types](#types)
   - [HostName (type alias)](#hostname-type-alias)
   - [HostNameBrand (interface)](#hostnamebrand-interface)
-  - [hostNameDecoder](#hostnamedecoder)
 
 ---
 
-# utils
+# brands
 
 ## HostName
 
@@ -31,6 +33,23 @@ export declare const HostName: t.BrandC<t.StringC, HostNameBrand>
 ```
 
 Added in v1.0.0
+
+# decoders
+
+## hostNameDecoder
+
+**Signature**
+
+```ts
+export declare const hostNameDecoder: <S extends string>() => D.Decoder<
+  S,
+  t.Branded<S, t.Branded<string, HostNameBrand>>
+>
+```
+
+Added in v1.1.0
+
+# types
 
 ## HostName (type alias)
 
@@ -53,16 +72,3 @@ export interface HostNameBrand {
 ```
 
 Added in v1.0.0
-
-## hostNameDecoder
-
-**Signature**
-
-```ts
-export declare const hostNameDecoder: <S extends string>() => D.Decoder<
-  S,
-  t.Branded<S, t.Branded<string, HostNameBrand>>
->
-```
-
-Added in v1.1.0

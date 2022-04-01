@@ -16,6 +16,7 @@ Added in v1.0.0
   - [Hexadecimal](#hexadecimal)
   - [Hexadecimal (type alias)](#hexadecimal-type-alias)
   - [HexadecimalBrand (interface)](#hexadecimalbrand-interface)
+  - [hexadecimalDecoder](#hexadecimaldecoder)
 
 ---
 
@@ -52,3 +53,16 @@ export interface HexadecimalBrand {
 ```
 
 Added in v1.0.0
+
+## hexadecimalDecoder
+
+**Signature**
+
+```ts
+export declare const hexadecimalDecoder: <S extends string>() => D.Decoder<
+  S,
+  t.Branded<S, t.Branded<string, HexadecimalBrand>>
+>
+```
+
+Added in v1.1.0
