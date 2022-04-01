@@ -6,6 +6,9 @@ parent: Modules
 
 ## ISSN overview
 
+International Standard Serial Number
+ISO 3297
+
 Added in v1.0.0
 
 ---

@@ -59,7 +59,7 @@ Added in v1.0.0
 **Signature**
 
 ```ts
-export declare const alphaDecoder: <S extends unknown>() => D.Decoder<S, t.Branded<S, AlphaBrand>>
+export declare const alphaDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, AlphaBrand>>
 ```
 
 Added in v1.1.0

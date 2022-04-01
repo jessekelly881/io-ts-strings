@@ -22,6 +22,7 @@ Added in v1.0.0
   - [IPv6Range](#ipv6range)
   - [IPv6Range (type alias)](#ipv6range-type-alias)
   - [IPv6RangeBrand (interface)](#ipv6rangebrand-interface)
+  - [ipRangeDecoder](#iprangedecoder)
 
 ---
 
@@ -122,3 +123,15 @@ export interface IPv6RangeBrand {
 ```
 
 Added in v1.0.0
+
+## ipRangeDecoder
+
+**Signature**
+
+```ts
+export declare const ipRangeDecoder: <S extends string, B extends 'any' | '4' | '6' = 'any'>(
+  code?: B
+) => D.Decoder<S, IPRangeBrand & S & t.Brand<BrandMap[B]>>
+```
+
+Added in v1.1.0

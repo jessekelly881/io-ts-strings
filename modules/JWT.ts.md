@@ -6,6 +6,8 @@ parent: Modules
 
 ## JWT overview
 
+JSON Web Token
+
 Added in v1.0.0
 
 ---

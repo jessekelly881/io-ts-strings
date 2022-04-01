@@ -129,9 +129,9 @@ Added in v1.0.0
 **Signature**
 
 ```ts
-export declare const ipDecoder: <S extends string, B extends '4' | '6'>(
-  code: B
-) => D.Decoder<S, S & t.Brand<t.Branded<string, IPBrand>> & t.Brand<IPMap[B]>>
+export declare const ipDecoder: <S extends string, B extends 'any' | '4' | '6' = 'any'>(
+  code?: B
+) => D.Decoder<S, IPBrand & S & t.Brand<IPMap[B]>>
 ```
 
 Added in v1.1.0
