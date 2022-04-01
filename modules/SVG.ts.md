@@ -12,12 +12,26 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
+- [decoders](#decoders)
+  - [svgDecoder](#svgdecoder)
 - [utils](#utils)
   - [SVG](#svg)
   - [SVG (type alias)](#svg-type-alias)
   - [SVGBrand (interface)](#svgbrand-interface)
 
 ---
+
+# decoders
+
+## svgDecoder
+
+**Signature**
+
+```ts
+export declare const svgDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, SVGBrand>>
+```
+
+Added in v1.1.0
 
 # utils
 

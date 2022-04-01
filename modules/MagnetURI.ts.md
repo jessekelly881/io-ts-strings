@@ -12,12 +12,26 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
+- [decoders](#decoders)
+  - [magnetUrlDecoder](#magneturldecoder)
 - [utils](#utils)
   - [MagnetURI](#magneturi)
   - [MagnetURI (type alias)](#magneturi-type-alias)
   - [MagnetURIBrand (interface)](#magneturibrand-interface)
 
 ---
+
+# decoders
+
+## magnetUrlDecoder
+
+**Signature**
+
+```ts
+export declare const magnetUrlDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, MagnetURIBrand>>
+```
+
+Added in v1.1.0
 
 # utils
 

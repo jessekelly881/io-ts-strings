@@ -12,12 +12,26 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
+- [decoders](#decoders)
+  - [semVerDecoder](#semverdecoder)
 - [utils](#utils)
   - [SemVer](#semver)
   - [SemVer (type alias)](#semver-type-alias)
   - [SemVerBrand (interface)](#semverbrand-interface)
 
 ---
+
+# decoders
+
+## semVerDecoder
+
+**Signature**
+
+```ts
+export declare const semVerDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, SemVerBrand>>
+```
+
+Added in v1.1.0
 
 # utils
 

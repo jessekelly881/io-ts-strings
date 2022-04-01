@@ -12,12 +12,26 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
+- [decoders](#decoders)
+  - [uppercaseDecoder](#uppercasedecoder)
 - [utils](#utils)
   - [Uppercase](#uppercase)
   - [Uppercase (type alias)](#uppercase-type-alias)
   - [UppercaseBrand (interface)](#uppercasebrand-interface)
 
 ---
+
+# decoders
+
+## uppercaseDecoder
+
+**Signature**
+
+```ts
+export declare const uppercaseDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, UppercaseBrand>>
+```
+
+Added in v1.1.0
 
 # utils
 

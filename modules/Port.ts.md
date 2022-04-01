@@ -12,12 +12,26 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
+- [decoders](#decoders)
+  - [portDecoder](#portdecoder)
 - [utils](#utils)
   - [Port](#port)
   - [Port (type alias)](#port-type-alias)
   - [PortBrand (interface)](#portbrand-interface)
 
 ---
+
+# decoders
+
+## portDecoder
+
+**Signature**
+
+```ts
+export declare const portDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, PortBrand>>
+```
+
+Added in v1.1.0
 
 # utils
 

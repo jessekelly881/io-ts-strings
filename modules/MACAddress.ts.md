@@ -12,12 +12,26 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
+- [decoders](#decoders)
+  - [macAddressDecoder](#macaddressdecoder)
 - [utils](#utils)
   - [MACAddress](#macaddress)
   - [MACAddress (type alias)](#macaddress-type-alias)
   - [MACAddressBrand (interface)](#macaddressbrand-interface)
 
 ---
+
+# decoders
+
+## macAddressDecoder
+
+**Signature**
+
+```ts
+export declare const macAddressDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, MACAddressBrand>>
+```
+
+Added in v1.1.0
 
 # utils
 

@@ -12,12 +12,26 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
+- [decoders](#decoders)
+  - [urlDecoder](#urldecoder)
 - [utils](#utils)
   - [URL](#url)
   - [URL (type alias)](#url-type-alias)
   - [URLBrand (interface)](#urlbrand-interface)
 
 ---
+
+# decoders
+
+## urlDecoder
+
+**Signature**
+
+```ts
+export declare const urlDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, URLBrand>>
+```
+
+Added in v1.1.0
 
 # utils
 

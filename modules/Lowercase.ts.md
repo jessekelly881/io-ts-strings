@@ -12,14 +12,17 @@ Added in v1.0.0
 
 <h2 class="text-delta">Table of contents</h2>
 
-- [utils](#utils)
+- [brands](#brands)
   - [Lowercase](#lowercase)
+- [decoders](#decoders)
+  - [lowercaseDecoder](#lowercasedecoder)
+- [types](#types)
   - [Lowercase (type alias)](#lowercase-type-alias)
   - [LowercaseBrand (interface)](#lowercasebrand-interface)
 
 ---
 
-# utils
+# brands
 
 ## Lowercase
 
@@ -30,6 +33,20 @@ export declare const Lowercase: t.BrandC<t.StringC, LowercaseBrand>
 ```
 
 Added in v1.0.0
+
+# decoders
+
+## lowercaseDecoder
+
+**Signature**
+
+```ts
+export declare const lowercaseDecoder: <S extends string>() => D.Decoder<S, t.Branded<S, LowercaseBrand>>
+```
+
+Added in v1.1.0
+
+# types
 
 ## Lowercase (type alias)
 
