@@ -1,4 +1,6 @@
 /**
+ * International Standard Serial Number
+ * ISO 3297
  * @since 1.0.0
  */
 import * as t from "io-ts";

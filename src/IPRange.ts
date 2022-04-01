@@ -2,7 +2,9 @@
  * @since 1.0.0
  */
 import * as t from "io-ts";
+import * as D from "io-ts/Decoder";
 import isIPRange from "validator/lib/isIPRange";
+import { pipe } from 'fp-ts/function';
 
 
 /**
@@ -67,6 +69,25 @@ export const IPv4Range = t.brand(
   (s): s is IPv4Range => isIPRange(s, "4"),
   "IPv4Range"
 );
+
+
+type BrandMap = {
+  "any": IPv4RangeBrand & IPv6RangeBrand,
+  "4": IPv4RangeBrand,
+  "6": IPv6RangeBrand
+}
+
+type Key = keyof BrandMap;
+
+/**
+ * @since 1.1.0
+ */
+export const ipRangeDecoder = <S extends string, B extends Key = "any">(code: B = "any" as B):
+  D.Decoder<S, IPRangeBrand & t.Branded<S, BrandMap[B]>> => pipe(
+    D.string,
+    D.refine((x): x is IPRangeBrand & t.Branded<S, BrandMap[B]> => code === "any" ? isIPRange(x) : isIPRange(x, code), "IPRange")
+  )
+
 
 
 export default IPRange;

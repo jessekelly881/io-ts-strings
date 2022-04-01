@@ -1,4 +1,5 @@
 /**
+ * JSON Web Token
  * @since 1.0.0
  */
 import * as t from "io-ts";

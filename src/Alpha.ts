@@ -27,8 +27,8 @@ export const Alpha = t.brand(t.string, (s): s is Alpha => isAlpha(s), "Alpha");
 /**
  * @since 1.1.0
  */
-export const alphaDecoder = <S extends unknown>(): D.Decoder<S, t.Branded<S, AlphaBrand>> => pipe(
-  D.fromRefinement((x): x is S & t.Brand<AlphaBrand> => typeof x === "string" && isAlpha(x), "Alpha")
+export const alphaDecoder = <S extends string>(): D.Decoder<S, t.Branded<S, AlphaBrand>> => pipe(
+  D.fromRefinement((x): x is S & t.Brand<AlphaBrand> => isAlpha(x), "Alpha")
 )
 
 

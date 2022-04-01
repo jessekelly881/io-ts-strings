@@ -76,6 +76,7 @@ export const IPv6 = t.brand(
 
 
 type IPMap = {
+  "any": IPv4Brand & IPv6Brand,
   "4": IPv4Brand,
   "6": IPv6Brand
 }
@@ -83,13 +84,14 @@ type IPMap = {
 type IPCode = keyof IPMap;
 
 
+
 /**
  * @since 1.1.0
  */
-export const ipDecoder = <S extends string, B extends IPCode>(code: B):
-  D.Decoder<S, S & t.Brand<IP> & t.Brand<IPMap[B]>> => pipe(
+export const ipDecoder = <S extends string, B extends IPCode = "any">(code: B = "any" as B):
+  D.Decoder<S, IPBrand & t.Branded<S, IPMap[B]>> => pipe(
     D.string,
-    D.refine((x): x is S & t.Brand<IP> & t.Brand<IPMap[B]> => isIP(x, code), "IP")
+    D.refine((x): x is IPBrand & t.Branded<S, IPMap[B]> => code === "any" ? isIP(x) : isIP(x, code), "IP")
   )
 
 
