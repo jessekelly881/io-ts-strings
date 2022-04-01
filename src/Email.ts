@@ -2,7 +2,9 @@
  * @since 1.0.0
  */
 import * as t from "io-ts";
+import * as D from "io-ts/Decoder";
 import isEmail from "validator/lib/isEmail";
+import { pipe } from "fp-ts/function";
 
 /**
  * @since 1.0.0
@@ -35,5 +37,14 @@ export const Email = t.brand(
   (s): s is Email => isEmail(s),
   "Email"
 );
+
+/**
+ * @since 1.1.0
+ */
+export const emailDecoder = <S extends string>(): D.Decoder<S, t.Branded<S, Email>> => pipe(
+  D.string,
+  D.refine((x): x is S & t.Brand<Email> => isEmail(x), "Email")
+)
+
 
 export default Email;

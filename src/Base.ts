@@ -84,9 +84,9 @@ const isBrand = (b: BrandCode) => ({
  * @since 1.1.0
  */
 export const baseDecoder = <S extends string, B extends BrandCode = "32">(brand: B = "32" as B):
-  D.Decoder<S, S & t.Brand<BrandMap[B]>> => pipe(
+  D.Decoder<S, t.Branded<S, BrandMap[B]>> => pipe(
     D.string,
-    D.refine((x): x is S & t.Brand<BrandMap[B]> => isBrand(brand)(x), "Ascii")
+    D.refine((x): x is t.Branded<S, BrandMap[B]> => isBrand(brand)(x), "Ascii")
   )
 
 
