@@ -1,4 +1,5 @@
 /**
+ * International Bank Account Number
  * @since 1.0.0
  */
 import * as t from "io-ts";

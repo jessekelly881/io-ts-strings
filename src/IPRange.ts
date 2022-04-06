@@ -72,7 +72,7 @@ export const IPv4Range = t.brand(
 
 
 type BrandMap = {
-  "any": IPv4RangeBrand & IPv6RangeBrand,
+  "any": never,
   "4": IPv4RangeBrand,
   "6": IPv6RangeBrand
 }
@@ -81,12 +81,18 @@ type Key = keyof BrandMap;
 
 /**
  * @since 1.1.0
+ * @example
+ * ipRangeDecoder()    // IPRange
+ * ipRangeDecoder("4") // IPRange & IPv4Range
+ * ipRangeDecoder("6") // IPRange & IPv6Range
  */
 export const ipRangeDecoder = <S extends string, B extends Key = "any">(code: B = "any" as B):
   D.Decoder<S, IPRangeBrand & t.Branded<S, BrandMap[B]>> => pipe(
     D.string,
     D.refine((x): x is IPRangeBrand & t.Branded<S, BrandMap[B]> => code === "any" ? isIPRange(x) : isIPRange(x, code), "IPRange")
   )
+
+ipRangeDecoder()
 
 
 

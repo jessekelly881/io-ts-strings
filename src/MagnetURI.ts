@@ -32,7 +32,7 @@ export const MagnetURI = t.brand(
  * @category decoders
  * @since 1.1.0
  */
-export const magnetUrlDecoder = <S extends string>(): D.Decoder<S, t.Branded<S, MagnetURIBrand>> => pipe(
+export const magnetUriDecoder = <S extends string>(): D.Decoder<S, t.Branded<S, MagnetURIBrand>> => pipe(
   D.fromRefinement((x): x is t.Branded<S, MagnetURIBrand> => isMagnetURI(x), "MagnetURI")
 )
 
